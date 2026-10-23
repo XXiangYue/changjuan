@@ -19,9 +19,9 @@
 <p align="center">
   <a href="#start">快速开始</a> ·
   <a href="#features">功能一览</a> ·
-  <a href="docs/README.md">项目文档</a> ·
-  <a href="CONTRIBUTING.md">参与贡献</a> ·
-  <a href="https://github.com/XXiangYue/changjuan/issues">问题反馈</a>
+  <a href="docs/README.md">文档</a> ·
+  <a href="CONTRIBUTING.md">贡献</a> ·
+  <a href="https://github.com/XXiangYue/changjuan/issues">反馈</a>
 </p>
 
 ---
