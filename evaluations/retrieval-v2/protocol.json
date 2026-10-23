@@ -1,0 +1,84 @@
+{
+  "version": "2.0",
+  "frozen_date": "2026-10-21",
+  "seed": 20261021,
+  "purpose": "独立来源检索基准；检验来源相关性与作品、时间、版本过滤，不运行写章或文学质量评价。",
+  "authors": "Codex AI构造故事与oracle；非真人专家标注，语义子集的难度仅按表述差异设计，未按模型结果挑选。",
+  "independent_unit": "scenario_id（80情境），同情境3查询相关；240查询不能当作240个独立案例。",
+  "split": {
+    "unit": "scenario_id",
+    "dev_scenarios": 20,
+    "heldout_scenarios": 60,
+    "dev_queries": 60,
+    "heldout_queries": 180,
+    "procedure": "按八个类别分层，前四类别各抽3个dev、后四各抽2个dev；Random(20261021)，不观察检索结果。"
+  },
+  "dataset_counts": {
+    "worlds": 8,
+    "scenarios": 80,
+    "documents": 728,
+    "queries": 240,
+    "answerable_queries": 160,
+    "unanswerable_queries": 80,
+    "stress_scenarios": 8
+  },
+  "schema": {
+    "position": "volume * 100000 + chapter；所有查询before=100100，严格小于才合法",
+    "source_chapter_key": "同作品卷章的稳定键；STALE与H1同键，H1当前revision=2、STALE旧revision=1",
+    "gold": "expected_doc_ids只指定合法历史当前版本；相同原文的未来、过期或跨作品文档不算命中",
+    "related": "同一短情境的附近背景，仅相关但不能回答任一查询",
+    "unanswerable": "expected_doc_ids为空，整个当前可用语料没有所问事实；不把检到相关片段当成找到了答案。"
+  },
+  "subsets": {
+    "literal": "80条，实体或术语与所需原文有显著字面重叠",
+    "semantic": "80条，使用指代、常见改述、否定与事件状态区别；不声称已证明模型必须语义检索才能命中",
+    "unanswerable": "80条，询问档案缺失的信息；应单列误答、误引及拒答结果，不能计算Recall时把空gold当作命中"
+  },
+  "pressure_inputs": {
+    "scenario_ids": [
+      "S03",
+      "S14",
+      "S25",
+      "S36",
+      "S47",
+      "S58",
+      "S69",
+      "S80"
+    ],
+    "construction": "每情境32份同作品未来章节近重复，其余情境1份未来；另各有一个失效同章旧版本、一个跨作品近重复。未来近重复不计真实创作样本，不估计自然出现频率。",
+    "reporting": "常规72情境与压力8情境分别报告；同时分dev/heldout，不能用压力收益代表平均自然小说效果。"
+  },
+  "recommended_metrics": [
+    "answerable: 按doc_id的Recall@k、MRR、nDCG；必须先核对作品/时序/版本合法性",
+    "unanswerable: 只报告检索返回情况不等于测得生成幻觉；如有答案层另以正确拒答/误引评估",
+    "illegal-citation@k: 未来、失效或跨作品来源计错，不计语义命中",
+    "按情境聚合分数及配对差值；bootstrap如采用须以情境为单位",
+    "cold/warm latency及实际启用的关键词/向量渠道；任何降级单列"
+  ],
+  "freeze_policy": "corpus.json与queries.json的SHA256冻结于本协议。实现可看dev，heldout仅在候选实现固定后一次验收；不以heldout输赢修改问题、gold、split或实体。程序未运行任何检索、LLM或heldout评分。",
+  "limitations": [
+    "人工式短档案为AI构造，显式正确来源不能替代人类作者需求或真实小说阅读判断",
+    "跨八种自造世界的主题差异仍不足以代表所有题材；每情境仅两段核心证据与一个附近背景",
+    "未来与旧版干扰有意包含近重复，尤其32份未来为候选挤占压力测试",
+    "不证明自然长篇记忆效果，不代表百万字、自动事实提取、写作质量或真实读者偏好",
+    "所有查询均有预先指定的合法历史两段，但negative所问内容不在任一当前文档中；没有暗中给negative补答案",
+    "短语级检索返回不能独自证明无答案拒答能力；需答案层才能得出拒答结论"
+  ],
+  "sha256": {
+    "corpus.json": "c60e79076637c19dff0f2ab6be778d6d42ff3d7236ff22ee26dff6dd741c7b76",
+    "queries.json": "bfeea08d3cd73627f6b449bf5e1eb70071ed3c2a2d7aa93244f6c8d32f689101"
+  },
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "80唯一情境、每情境恰3个唯一查询；总240",
+      "20/60情境完整分组，60/180查询，无split交叉",
+      "八类各10情境，八世界各10情境",
+      "所有gold存在且同情境、同项目、非stale、章位严格小于before",
+      "每情境2合法历史证据、1相关背景、1同章失效旧版本、至少1未来与1跨作品干扰",
+      "8压力情境各32未来近似片段；其余1未来",
+      "160有答案、80无答案；literal/semantic/unanswerable各80",
+      "所有正文与查询非空且查询文本唯一；历史章键在作品内不冲突，旧版本除外"
+    ]
+  }
+}

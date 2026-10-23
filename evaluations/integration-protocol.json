@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "frozen_at": "2026-10-18T12:56:21.433164+00:00",
+  "source_manifest_sha256": "8716416697674b55704786195bf774d62de6447cf189b5a35caf06f97f0baff5",
+  "shared_core_rules": "铸炉小镇的玄幻手艺世界。沈砚是火息初阶铸器学徒；听息须裸露手指实际接触器物、消耗肺息，不能隔空扫描。纳炉境需三日调息、赤砂一钱与完整炉砖，境界和胜利需材料、时间、身体条件与代价。洛蘅有寻找失踪同门的独立目标，不为沈砚无条件牺牲。楚衡优先稳住镇民，不嗜杀。",
+  "neutral_history": "檐角一滴水悬着。铺前石板映着灰光，风把门边草屑推向墙脚。这个片刻没有人进出，屋里的东西仍在原处。",
+  "archive_position": 1,
+  "target_position": 12,
+  "recent_summaries": 10,
+  "repetitions": 2,
+  "target_chars": 600,
+  "confirmation_policy": "测试操作者接受结构合规提案及最终正文，保留未通过审核并注明原因；不是自然人评价",
+  "scope": "真实执行图的历史信息缺口压力验收，非自然长篇记忆生成质量实验",
+  "software_sha256": {
+    "engine.py": "15df701cd8181a12d97f7d7afea37820860f45f710f03f3c2f53e76f420b5edf",
+    "models.py": "6f6f33829bc2e6dceadd95ac80d4d360235e43ccccf2565cab1c2e9f8272a932",
+    "llm.py": "0577dc2c4f2d86d0e5636893792f7ad1c08f812b70c19df1cb1e04d28bf0fcb0",
+    "retrieval.py": "3238403718da7ed96756966476524467874eb5a0fb41604ac5edd1714e7c63f8",
+    "repository.py": "388637b47cc38bc5e94c40c820f7e2c07088cfdc3d324cd191acd2b1622f50cf",
+    "integration_eval.py": "bb761ed018971d227c7a7817381f9b31ec9216796d38b1cb7077e1b8138e39fe"
+  }
+}

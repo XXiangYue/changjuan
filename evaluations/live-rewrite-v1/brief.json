@@ -1,0 +1,39 @@
+{
+  "version": "live-rewrite-v1",
+  "title": "改稿验收 · 借来的铁",
+  "scope": "单章独立修订验收；原三章大纲/初始记忆仅作为上下文，不额外生成第二、三章。",
+  "source": {
+    "primary_packet": "artifacts/resume/live-story-v1/review-packets/primary/public/entry_f3e0e733eabb.json",
+    "primary_packet_sha256": "7f38bfd2f14484d353b0bbb9312704520162a22f43afa9e6240b18a14daec13f",
+    "source_body_sha256": "c4b08f2c94c08df311719b4e719e11e5021005b7fd33dd258d40485b4f39f74e",
+    "source_characters": 1770,
+    "shared_initial_snapshot": "artifacts/resume/live-story-v1/shared-blueprint.json",
+    "shared_initial_snapshot_sha256": "0ba1b5e953e6bb9c869bd144ed39035462db9083170a2e39f877deaeebad98c3"
+  },
+  "input_snapshot_sha256": "4b45e8521ec48b69ed6e9556578066d123afdadb6dfacf9f0dfe04df86de9e82",
+  "instruction": "将选中的第一章全文改写为1200至1600个Unicode字符（含标点换行、不含章节标题），目标1400字符；压缩重复表达，保留完整场景、人物动作与对话，不用梗概代替。修正三处日期：真实领条的落款改为今晨寅时，阮禾说的许岱取药时间也改为今晨寅时；王婶要赶的是第三日早市，不是明日早市，第三天天边发白前亲送还钳的约定保持。保留实际听到两短一长、读明‘许岱，领清灼散一包’的真实签名领条、王婶实际交借唯一合口炉钳及林砚答应期限；旧木楔垫药架、麻绳试拉架脚仍有实际动作。林砚和阮禾只能知道许岱签名领了一包，仍不知道药给了谁或用途，不提前揭示阿田服药。母亲服下现存一包且只镇痛；触温必须掌贴铜、只辨眼前热振并付出掌痛发麻，不改写成读心、回看历史或无代价突破。只返回改写后的完整正文，不加标题、解释或核对清单。",
+  "selection": "原章全文，逐字等于source_body_sha256；由操作者在产品UI选中。",
+  "length": {
+    "target": 1400,
+    "min_characters": 1200,
+    "max_characters": 1600,
+    "unit": "正文Unicode字符，含标点换行、不含标题"
+  },
+  "date_corrections": [
+    {
+      "location": "签名领条落款",
+      "before": "落款昨日近寅时",
+      "after_meaning": "今晨寅时"
+    },
+    {
+      "location": "阮禾关于许岱取药的说法",
+      "before": "上午许镇吏取走一格药包",
+      "after_meaning": "今晨寅时取走药包"
+    },
+    {
+      "location": "王婶需用炉钳的早市",
+      "before": "我明日早市补灶口",
+      "after_meaning": "第三日早市用钳；第三天天边发白前实际亲送归还的约定不变"
+    }
+  ]
+}

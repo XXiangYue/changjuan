@@ -1,0 +1,3577 @@
+{
+  "version": "novel-v1",
+  "queries": [
+    {
+      "id": "full-ch01-fact1-direct",
+      "scenario_id": "full-ch01-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "镇西杂货铺的铜扣订单约定几日交货，价格比平时高多少？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "5b2520e3-1fde-5dfc-abf5-a9df836b924d"
+      ],
+      "gold_semantics": "any_of",
+      "category": "订单条件",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:1",
+      "source_revision": 2,
+      "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+      "reference_answer": "三日交货，价格高一成半。",
+      "judgment_basis": "原句直接记述已经接下的订单条件；不把约定交期视作交货已完成。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+          "source_revision": 2,
+          "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+          "start": 374,
+          "end": 402,
+          "quote": "镇西杂货铺缺一批扣门的铜扣，三日交货，价比平时多一成半。",
+          "selected_anchor": "镇西杂货铺缺一批扣门的铜扣，三日交货，价比平时多一成半。",
+          "expected_doc_ids": [
+            "5b2520e3-1fde-5dfc-abf5-a9df836b924d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch01-fact1-paraphrase",
+      "scenario_id": "full-ch01-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚接的那批扣门铜活，交期和加价幅度各是多少？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "5b2520e3-1fde-5dfc-abf5-a9df836b924d"
+      ],
+      "gold_semantics": "any_of",
+      "category": "订单条件",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:1",
+      "source_revision": 2,
+      "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+      "reference_answer": "三日交货，价格高一成半。",
+      "judgment_basis": "原句直接记述已经接下的订单条件；不把约定交期视作交货已完成。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+          "source_revision": 2,
+          "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+          "start": 374,
+          "end": 402,
+          "quote": "镇西杂货铺缺一批扣门的铜扣，三日交货，价比平时多一成半。",
+          "selected_anchor": "镇西杂货铺缺一批扣门的铜扣，三日交货，价比平时多一成半。",
+          "expected_doc_ids": [
+            "5b2520e3-1fde-5dfc-abf5-a9df836b924d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch01-fact2-direct",
+      "scenario_id": "full-ch01-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚第一次将红灰带回铺子后，用什么容器封存，压在何处？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "1bbfeb2b-1a6f-519e-a11f-121fa79c65d7",
+        "fd93efec-92b1-5cd1-993b-f1eb103decc9"
+      ],
+      "gold_semantics": "any_of",
+      "category": "初次封灰",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:1",
+      "source_revision": 2,
+      "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+      "reference_answer": "装在蜡封小陶罐，压在旧砧底下。",
+      "judgment_basis": "这是首章已完成的收存动作；查询时点截止首章，不引用次章迁藏位置。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+          "source_revision": 2,
+          "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+          "start": 2281,
+          "end": 2320,
+          "quote": "他把灰收进小陶罐，蜡封罐口，压进旧砧底下，又把铜铃擦净，对着窗缝光看那圈炉号。",
+          "selected_anchor": "他把灰收进小陶罐，蜡封罐口，压进旧砧底下",
+          "expected_doc_ids": [
+            "1bbfeb2b-1a6f-519e-a11f-121fa79c65d7",
+            "fd93efec-92b1-5cd1-993b-f1eb103decc9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch01-fact2-paraphrase",
+      "scenario_id": "full-ch01-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "刚从炉房取回的那撮异色粉末，最初被藏在哪个器物下，装在什么里面？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "1bbfeb2b-1a6f-519e-a11f-121fa79c65d7",
+        "fd93efec-92b1-5cd1-993b-f1eb103decc9"
+      ],
+      "gold_semantics": "any_of",
+      "category": "初次封灰",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:1",
+      "source_revision": 2,
+      "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+      "reference_answer": "装在蜡封小陶罐，压在旧砧底下。",
+      "judgment_basis": "这是首章已完成的收存动作；查询时点截止首章，不引用次章迁藏位置。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b855cb597ac54efca9b03513b470dfc8",
+          "source_revision": 2,
+          "source_sha256": "f90b2fe1e422d6100502949269798a7e89b5c0bfc9e15a0e7044c8a8cf9804fc",
+          "start": 2281,
+          "end": 2320,
+          "quote": "他把灰收进小陶罐，蜡封罐口，压进旧砧底下，又把铜铃擦净，对着窗缝光看那圈炉号。",
+          "selected_anchor": "他把灰收进小陶罐，蜡封罐口，压进旧砧底下",
+          "expected_doc_ids": [
+            "1bbfeb2b-1a6f-519e-a11f-121fa79c65d7",
+            "fd93efec-92b1-5cd1-993b-f1eb103decc9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch02-fact1-direct",
+      "scenario_id": "full-ch02-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "楚衡立押砧字据时，三日宽限是否计今日，钱到牌赎截止何时？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "8aa49026-d205-5bf2-93d9-1ddbf946bc2d",
+        "0cf5b7c5-0a77-5206-93e7-21bfe8223258"
+      ],
+      "gold_semantics": "any_of",
+      "category": "赎押期限",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:2",
+      "source_revision": 1,
+      "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+      "reference_answer": "今日不算，第三日日落前。",
+      "judgment_basis": "询问已经明确写出的初次条款；不把后文缩期带回此章。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+          "source_revision": 1,
+          "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+          "start": 760,
+          "end": 797,
+          "quote": "他把一张素纸推过来，取笔蘸墨，“三日宽限，今日不算，第三日日落前钱到牌赎。",
+          "selected_anchor": "三日宽限，今日不算，第三日日落前钱到牌赎。",
+          "expected_doc_ids": [
+            "8aa49026-d205-5bf2-93d9-1ddbf946bc2d",
+            "0cf5b7c5-0a77-5206-93e7-21bfe8223258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch02-fact1-paraphrase",
+      "scenario_id": "full-ch02-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "最初押下谋生砧时，镇守给的宽限从哪天起算，最后等到哪一刻？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "8aa49026-d205-5bf2-93d9-1ddbf946bc2d",
+        "0cf5b7c5-0a77-5206-93e7-21bfe8223258"
+      ],
+      "gold_semantics": "any_of",
+      "category": "赎押期限",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:2",
+      "source_revision": 1,
+      "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+      "reference_answer": "今日不算，第三日日落前。",
+      "judgment_basis": "询问已经明确写出的初次条款；不把后文缩期带回此章。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+          "source_revision": 1,
+          "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+          "start": 760,
+          "end": 797,
+          "quote": "他把一张素纸推过来，取笔蘸墨，“三日宽限，今日不算，第三日日落前钱到牌赎。",
+          "selected_anchor": "三日宽限，今日不算，第三日日落前钱到牌赎。",
+          "expected_doc_ids": [
+            "8aa49026-d205-5bf2-93d9-1ddbf946bc2d",
+            "0cf5b7c5-0a77-5206-93e7-21bfe8223258"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch02-fact2-direct",
+      "scenario_id": "full-ch02-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "抬砧前沈砚把蜡封陶罐和拓号纸从哪里取出，又塞到哪里？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "af4ad009-faf7-56c1-b839-c7d21fc847de"
+      ],
+      "gold_semantics": "any_of",
+      "category": "陶罐迁藏",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:2",
+      "source_revision": 1,
+      "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+      "reference_answer": "从砖缝取出，改藏灶膛后头松砖内。",
+      "judgment_basis": "原句含取出与重新存放两个已完成动作，不需推断持有人。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+          "source_revision": 1,
+          "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+          "start": 2752,
+          "end": 2816,
+          "quote": "他把旧砧挪开半尺，砖缝里抠出那只蜡封陶罐和拓号纸，一并塞进灶膛后头松动的砖里，重新抵上，又抓一把灶灰抹平砖缝，才把砧子推回原处。",
+          "selected_anchor": "砖缝里抠出那只蜡封陶罐和拓号纸，一并塞进灶膛后头松动的砖里",
+          "expected_doc_ids": [
+            "af4ad009-faf7-56c1-b839-c7d21fc847de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch02-fact2-paraphrase",
+      "scenario_id": "full-ch02-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "旧砧将被押走之前，那份封着的灰样及拓纸改藏在铺子什么位置？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "af4ad009-faf7-56c1-b839-c7d21fc847de"
+      ],
+      "gold_semantics": "any_of",
+      "category": "陶罐迁藏",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:2",
+      "source_revision": 1,
+      "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+      "reference_answer": "从砖缝取出，改藏灶膛后头松砖内。",
+      "judgment_basis": "原句含取出与重新存放两个已完成动作，不需推断持有人。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "97f45cef07e240f8bdf20abfa6efde90",
+          "source_revision": 1,
+          "source_sha256": "8f0b316d65073032445caec410773d08913a650303ccc23359f598b909b44abb",
+          "start": 2752,
+          "end": 2816,
+          "quote": "他把旧砧挪开半尺，砖缝里抠出那只蜡封陶罐和拓号纸，一并塞进灶膛后头松动的砖里，重新抵上，又抓一把灶灰抹平砖缝，才把砧子推回原处。",
+          "selected_anchor": "砖缝里抠出那只蜡封陶罐和拓号纸，一并塞进灶膛后头松动的砖里",
+          "expected_doc_ids": [
+            "af4ad009-faf7-56c1-b839-c7d21fc847de"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch03-fact1-direct",
+      "scenario_id": "full-ch03-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "辨听铜铃后，洛蘅如何包好铜铃并收在什么地方？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "34491dc4-367a-5ffb-99bf-c45ee5588e13"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜铃锁箱",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:3",
+      "source_revision": 1,
+      "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+      "reference_answer": "洛蘅用布巾包裹，放铁箱内层并扣紧。",
+      "judgment_basis": "动作直接完成，不仅是口头约定；段落中的主语与物品明确。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+          "source_revision": 1,
+          "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+          "start": 1453,
+          "end": 1479,
+          "quote": "洛蘅点头，拿布巾把铜铃裹了，收进铁箱内层，按紧搭扣。",
+          "selected_anchor": "洛蘅点头，拿布巾把铜铃裹了，收进铁箱内层，按紧搭扣。",
+          "expected_doc_ids": [
+            "34491dc4-367a-5ffb-99bf-c45ee5588e13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch03-fact1-paraphrase",
+      "scenario_id": "full-ch03-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚右手发麻后，那件断舌铜器由同伴怎样妥善保存？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "34491dc4-367a-5ffb-99bf-c45ee5588e13"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜铃锁箱",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:3",
+      "source_revision": 1,
+      "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+      "reference_answer": "洛蘅用布巾包裹，放铁箱内层并扣紧。",
+      "judgment_basis": "动作直接完成，不仅是口头约定；段落中的主语与物品明确。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+          "source_revision": 1,
+          "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+          "start": 1453,
+          "end": 1479,
+          "quote": "洛蘅点头，拿布巾把铜铃裹了，收进铁箱内层，按紧搭扣。",
+          "selected_anchor": "洛蘅点头，拿布巾把铜铃裹了，收进铁箱内层，按紧搭扣。",
+          "expected_doc_ids": [
+            "34491dc4-367a-5ffb-99bf-c45ee5588e13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch03-fact2-direct",
+      "scenario_id": "full-ch03-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚亲自挑开旧窑封条卷边后，看见骑缝上写的哪一天？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "b960c1d3-f014-5ecc-a48e-c5c238af0339"
+      ],
+      "gold_semantics": "any_of",
+      "category": "封条骑缝日",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:3",
+      "source_revision": 1,
+      "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+      "reference_answer": "初九。",
+      "judgment_basis": "来自实地看见的封条字样，不依赖先前茶摊转述。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+          "source_revision": 1,
+          "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+          "start": 2397,
+          "end": 2433,
+          "quote": "沈砚弯腰，用左手食指挑开卷边——骑缝处红戳盖得歪，“初九”两字清清楚楚。",
+          "selected_anchor": "骑缝处红戳盖得歪，“初九”两字清清楚楚。",
+          "expected_doc_ids": [
+            "b960c1d3-f014-5ecc-a48e-c5c238af0339"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch03-fact2-paraphrase",
+      "scenario_id": "full-ch03-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "到镇北窑口查封纸时，歪红戳旁清楚露出的日期是多少？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "b960c1d3-f014-5ecc-a48e-c5c238af0339"
+      ],
+      "gold_semantics": "any_of",
+      "category": "封条骑缝日",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:3",
+      "source_revision": 1,
+      "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+      "reference_answer": "初九。",
+      "judgment_basis": "来自实地看见的封条字样，不依赖先前茶摊转述。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "7caf6010167a4dfa94a39860b239f69f",
+          "source_revision": 1,
+          "source_sha256": "2414b2a5cacce5ea789a35c6b3cdcdad3aec385dd8171b946fbf3f1cec9eb46d",
+          "start": 2397,
+          "end": 2433,
+          "quote": "沈砚弯腰，用左手食指挑开卷边——骑缝处红戳盖得歪，“初九”两字清清楚楚。",
+          "selected_anchor": "骑缝处红戳盖得歪，“初九”两字清清楚楚。",
+          "expected_doc_ids": [
+            "b960c1d3-f014-5ecc-a48e-c5c238af0339"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch04-fact1-direct",
+      "scenario_id": "full-ch04-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "洛蘅认出窑壁刻字后，说同门给自己起的号是什么？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "4e937df8-a170-5fde-b0eb-bcb0e1f46394",
+        "61f298d4-814c-5adf-9028-0be4d7787854"
+      ],
+      "gold_semantics": "any_of",
+      "category": "同门自号",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:4",
+      "source_revision": 1,
+      "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+      "reference_answer": "崔炉。",
+      "judgment_basis": "承接洛蘅辨认刻字的叙述，直接引出自号；不从刀痕推论铸铃者。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+          "source_revision": 1,
+          "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+          "start": 1189,
+          "end": 1210,
+          "quote": "过了两息才道：“崔炉。他给自己起的号。”\n",
+          "selected_anchor": "过了两息才道：“崔炉。他给自己起的号。”",
+          "expected_doc_ids": [
+            "4e937df8-a170-5fde-b0eb-bcb0e1f46394",
+            "61f298d4-814c-5adf-9028-0be4d7787854"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch04-fact1-paraphrase",
+      "scenario_id": "full-ch04-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "修炉女子辨认墙上的崔字后，将那位失踪同门的自称说成什么？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "4e937df8-a170-5fde-b0eb-bcb0e1f46394",
+        "61f298d4-814c-5adf-9028-0be4d7787854"
+      ],
+      "gold_semantics": "any_of",
+      "category": "同门自号",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:4",
+      "source_revision": 1,
+      "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+      "reference_answer": "崔炉。",
+      "judgment_basis": "承接洛蘅辨认刻字的叙述，直接引出自号；不从刀痕推论铸铃者。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+          "source_revision": 1,
+          "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+          "start": 1189,
+          "end": 1210,
+          "quote": "过了两息才道：“崔炉。他给自己起的号。”\n",
+          "selected_anchor": "过了两息才道：“崔炉。他给自己起的号。”",
+          "expected_doc_ids": [
+            "4e937df8-a170-5fde-b0eb-bcb0e1f46394",
+            "61f298d4-814c-5adf-9028-0be4d7787854"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch04-fact2-direct",
+      "scenario_id": "full-ch04-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "楚衡指定由哪个机构留存旧窑挖出的断铁管？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "58063609-cc50-5eeb-8f04-4539aba7f392"
+      ],
+      "gold_semantics": "any_of",
+      "category": "断管收存",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:4",
+      "source_revision": 1,
+      "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+      "reference_answer": "衙署。",
+      "judgment_basis": "引文同时包括下令者、断管与明确收存机构；不将携带者等同所有者。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+          "source_revision": 1,
+          "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+          "start": 2038,
+          "end": 2090,
+          "quote": "楚衡看他两息，把铁管交给镇丁裹进麻布：“衙署留着。”他扭头对背匣子的道，“把封条补上，骑缝按今日画押。”",
+          "selected_anchor": "楚衡看他两息，把铁管交给镇丁裹进麻布：“衙署留着。”",
+          "expected_doc_ids": [
+            "58063609-cc50-5eeb-8f04-4539aba7f392"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch04-fact2-paraphrase",
+      "scenario_id": "full-ch04-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "镇丁将窑底金属残管裹好后，镇守说这件证物归哪里保管？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "58063609-cc50-5eeb-8f04-4539aba7f392"
+      ],
+      "gold_semantics": "any_of",
+      "category": "断管收存",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:4",
+      "source_revision": 1,
+      "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+      "reference_answer": "衙署。",
+      "judgment_basis": "引文同时包括下令者、断管与明确收存机构；不将携带者等同所有者。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "43a1ce30e0594dc5bd74c96ac106cd44",
+          "source_revision": 1,
+          "source_sha256": "e76f25019374f5a31d8d1b8bddc940e356b581cee819ccf65ae020cf5a2be4d2",
+          "start": 2038,
+          "end": 2090,
+          "quote": "楚衡看他两息，把铁管交给镇丁裹进麻布：“衙署留着。”他扭头对背匣子的道，“把封条补上，骑缝按今日画押。”",
+          "selected_anchor": "楚衡看他两息，把铁管交给镇丁裹进麻布：“衙署留着。”",
+          "expected_doc_ids": [
+            "58063609-cc50-5eeb-8f04-4539aba7f392"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch05-fact1-direct",
+      "scenario_id": "full-ch05-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚清晨试手时，哪三根右手手指重捏后才有闷压感？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "326ac1be-dbeb-5447-9ecf-bd334c49508a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "三指失感",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:5",
+      "source_revision": 1,
+      "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+      "reference_answer": "右手食指、中指、无名指。",
+      "judgment_basis": "清晨测试的叙述逐一列出手指；不推断永久残疾或医学病因。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+          "source_revision": 1,
+          "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+          "start": 190,
+          "end": 235,
+          "quote": "大拇指和小指按下去酸麻，食指、中指、无名指捏重了才有闷闷的压感，掐出一道白印，半天不觉疼。",
+          "selected_anchor": "食指、中指、无名指捏重了才有闷闷的压感",
+          "expected_doc_ids": [
+            "326ac1be-dbeb-5447-9ecf-bd334c49508a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch05-fact1-paraphrase",
+      "scenario_id": "full-ch05-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "铺主测试伤手后，感觉迟钝的中间三个指头具体是哪几个？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "326ac1be-dbeb-5447-9ecf-bd334c49508a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "三指失感",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:5",
+      "source_revision": 1,
+      "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+      "reference_answer": "右手食指、中指、无名指。",
+      "judgment_basis": "清晨测试的叙述逐一列出手指；不推断永久残疾或医学病因。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+          "source_revision": 1,
+          "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+          "start": 190,
+          "end": 235,
+          "quote": "大拇指和小指按下去酸麻，食指、中指、无名指捏重了才有闷闷的压感，掐出一道白印，半天不觉疼。",
+          "selected_anchor": "食指、中指、无名指捏重了才有闷闷的压感",
+          "expected_doc_ids": [
+            "326ac1be-dbeb-5447-9ecf-bd334c49508a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch05-fact2-direct",
+      "scenario_id": "full-ch05-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚拿去当铺的四枚砧钉，钉帽上的字合起来是什么？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "713fb766-b434-56b7-bad3-a126c4d9de85"
+      ],
+      "gold_semantics": "any_of",
+      "category": "砧钉铭字",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:5",
+      "source_revision": 1,
+      "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+      "reference_answer": "沈记老作。",
+      "judgment_basis": "这是当铺交易前直接可见的铭刻，不由印边相似推论来历。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+          "source_revision": 1,
+          "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+          "start": 1994,
+          "end": 2013,
+          "quote": "钉帽上各刻一字，合起来是“沈记老作”。",
+          "selected_anchor": "钉帽上各刻一字，合起来是“沈记老作”。",
+          "expected_doc_ids": [
+            "713fb766-b434-56b7-bad3-a126c4d9de85"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch05-fact2-paraphrase",
+      "scenario_id": "full-ch05-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "那四颗被拿去换钱的旧钉，合读四个帽面刻字得到哪句话？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "713fb766-b434-56b7-bad3-a126c4d9de85"
+      ],
+      "gold_semantics": "any_of",
+      "category": "砧钉铭字",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:5",
+      "source_revision": 1,
+      "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+      "reference_answer": "沈记老作。",
+      "judgment_basis": "这是当铺交易前直接可见的铭刻，不由印边相似推论来历。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "4baedfcb6a6547339a895113c294be8d",
+          "source_revision": 1,
+          "source_sha256": "3891ca72a8277687641266cbabe238f6d1cf3b7ed06855a1d1e9147eaed00241",
+          "start": 1994,
+          "end": 2013,
+          "quote": "钉帽上各刻一字，合起来是“沈记老作”。",
+          "selected_anchor": "钉帽上各刻一字，合起来是“沈记老作”。",
+          "expected_doc_ids": [
+            "713fb766-b434-56b7-bad3-a126c4d9de85"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch06-fact1-direct",
+      "scenario_id": "full-ch06-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈砚准备付温肺丹价时，解开合用的是原先哪两份钱？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "ca4d3adf-5403-5d9b-a99d-6e7de57d412f"
+      ],
+      "gold_semantics": "any_of",
+      "category": "购丹拆款",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:6",
+      "source_revision": 1,
+      "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+      "reference_answer": "赎牌的钱和预留材料钱。",
+      "judgment_basis": "正文明确拆解两份资金，随后排钱付款；不从购买反推原始丹价。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+          "source_revision": 1,
+          "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+          "start": 1320,
+          "end": 1373,
+          "quote": "他把赎牌那份连同预留料钱解开，合起来够付丹价，只会剩下薄薄一叠散钱；钱一出去，今日日落前的赎牌便没有着落。",
+          "selected_anchor": "他把赎牌那份连同预留料钱解开，合起来够付丹价",
+          "expected_doc_ids": [
+            "ca4d3adf-5403-5d9b-a99d-6e7de57d412f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch06-fact1-paraphrase",
+      "scenario_id": "full-ch06-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "为了给同伴买那枚护肺药，铺主挪用了本来分给哪两项支出的款？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "ca4d3adf-5403-5d9b-a99d-6e7de57d412f"
+      ],
+      "gold_semantics": "any_of",
+      "category": "购丹拆款",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:6",
+      "source_revision": 1,
+      "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+      "reference_answer": "赎牌的钱和预留材料钱。",
+      "judgment_basis": "正文明确拆解两份资金，随后排钱付款；不从购买反推原始丹价。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+          "source_revision": 1,
+          "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+          "start": 1320,
+          "end": 1373,
+          "quote": "他把赎牌那份连同预留料钱解开，合起来够付丹价，只会剩下薄薄一叠散钱；钱一出去，今日日落前的赎牌便没有着落。",
+          "selected_anchor": "他把赎牌那份连同预留料钱解开，合起来够付丹价",
+          "expected_doc_ids": [
+            "ca4d3adf-5403-5d9b-a99d-6e7de57d412f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch06-fact2-direct",
+      "scenario_id": "full-ch06-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "买下的一整枚温肺丹在本章末由谁带走？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "f638b1d7-ac1c-5cff-87ee-2f275da1c235",
+        "01525280-dc0d-5b58-8a0f-65ed382d2ae9"
+      ],
+      "gold_semantics": "any_of",
+      "category": "整丹随人",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:6",
+      "source_revision": 1,
+      "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+      "reference_answer": "洛蘅带走整枚。",
+      "judgment_basis": "区分已经完成的带走与随后半枚用途安排；不声称本章已服药。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+          "source_revision": 1,
+          "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+          "start": 3051,
+          "end": 3077,
+          "quote": "温肺丹整枚由洛蘅带走，半枚今夜归她，半枚明早带上炉。",
+          "selected_anchor": "温肺丹整枚由洛蘅带走，半枚今夜归她，半枚明早带上炉。",
+          "expected_doc_ids": [
+            "f638b1d7-ac1c-5cff-87ee-2f275da1c235",
+            "01525280-dc0d-5b58-8a0f-65ed382d2ae9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch06-fact2-paraphrase",
+      "scenario_id": "full-ch06-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "离开铺子时，刚购得的护肺丸药整颗实际随哪位人物保管？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "f638b1d7-ac1c-5cff-87ee-2f275da1c235",
+        "01525280-dc0d-5b58-8a0f-65ed382d2ae9"
+      ],
+      "gold_semantics": "any_of",
+      "category": "整丹随人",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:6",
+      "source_revision": 1,
+      "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+      "reference_answer": "洛蘅带走整枚。",
+      "judgment_basis": "区分已经完成的带走与随后半枚用途安排；不声称本章已服药。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "ce10d09ecb31425b9b014d887a56ed85",
+          "source_revision": 1,
+          "source_sha256": "84c30169e9437e79ea5da06ce37e20deb0490b97d20384a41d68bd75e7c14cd5",
+          "start": 3051,
+          "end": 3077,
+          "quote": "温肺丹整枚由洛蘅带走，半枚今夜归她，半枚明早带上炉。",
+          "selected_anchor": "温肺丹整枚由洛蘅带走，半枚今夜归她，半枚明早带上炉。",
+          "expected_doc_ids": [
+            "f638b1d7-ac1c-5cff-87ee-2f275da1c235",
+            "01525280-dc0d-5b58-8a0f-65ed382d2ae9"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch07-fact1-direct",
+      "scenario_id": "full-ch07-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "洛蘅回铺后自述，她因锉灰咳得紧，提前服了多少温肺丹？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "bd90c0ce-a2c7-55a3-b2ee-35cf857f14dc"
+      ],
+      "gold_semantics": "any_of",
+      "category": "提前服丹",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:7",
+      "source_revision": 1,
+      "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+      "reference_answer": "半枚。",
+      "judgment_basis": "洛蘅回铺后亲口说明已服的数量，后文瓶中余量相合。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+          "source_revision": 1,
+          "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+          "start": 449,
+          "end": 491,
+          "quote": "她从铁箱侧兜摸出蜡封丹瓶，搁在灶台上：“说好夜里服，刚才锉灰咳得紧，我提前服了半枚。",
+          "selected_anchor": "说好夜里服，刚才锉灰咳得紧，我提前服了半枚。",
+          "expected_doc_ids": [
+            "bd90c0ce-a2c7-55a3-b2ee-35cf857f14dc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch07-fact1-paraphrase",
+      "scenario_id": "full-ch07-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "据修炉女子回铺后的说法，原来留到夜里的护肺药，她在初审前已经服用了多大一份？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "bd90c0ce-a2c7-55a3-b2ee-35cf857f14dc"
+      ],
+      "gold_semantics": "any_of",
+      "category": "提前服丹",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:7",
+      "source_revision": 1,
+      "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+      "reference_answer": "半枚。",
+      "judgment_basis": "洛蘅回铺后亲口说明已服的数量，后文瓶中余量相合。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+          "source_revision": 1,
+          "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+          "start": 449,
+          "end": 491,
+          "quote": "她从铁箱侧兜摸出蜡封丹瓶，搁在灶台上：“说好夜里服，刚才锉灰咳得紧，我提前服了半枚。",
+          "selected_anchor": "说好夜里服，刚才锉灰咳得紧，我提前服了半枚。",
+          "expected_doc_ids": [
+            "bd90c0ce-a2c7-55a3-b2ee-35cf857f14dc"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch07-fact2-direct",
+      "scenario_id": "full-ch07-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "宋文书验封后，全部红灰实际怎样称分和封存？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "1799e936-c103-5d18-95aa-bd3bb8fa6b3e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰样实际称分",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:7",
+      "source_revision": 1,
+      "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+      "reference_answer": "称成等重两份，各自封好。",
+      "judgment_basis": "取已经执行的称分句，不将沈砚先前提出的交易条件当执行证据。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+          "source_revision": 1,
+          "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+          "start": 3078,
+          "end": 3123,
+          "quote": "宋文书验过蜡封，楚衡才开罐，将全部红灰称成等重两份，各自封好，一半塞进小木匣，一半推回来。",
+          "selected_anchor": "楚衡才开罐，将全部红灰称成等重两份，各自封好",
+          "expected_doc_ids": [
+            "1799e936-c103-5d18-95aa-bd3bb8fa6b3e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch07-fact2-paraphrase",
+      "scenario_id": "full-ch07-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "作为换取推荐格的一步，那罐样品开封后被分成几份、重量如何处理？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "1799e936-c103-5d18-95aa-bd3bb8fa6b3e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰样实际称分",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:7",
+      "source_revision": 1,
+      "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+      "reference_answer": "称成等重两份，各自封好。",
+      "judgment_basis": "取已经执行的称分句，不将沈砚先前提出的交易条件当执行证据。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "431fd682cf0e42c2a242b33590a672b0",
+          "source_revision": 1,
+          "source_sha256": "c2d2b566daad1f2fcf879b542709dd46734bb6dd6e7bd34e63ad0575a291b098",
+          "start": 3078,
+          "end": 3123,
+          "quote": "宋文书验过蜡封，楚衡才开罐，将全部红灰称成等重两份，各自封好，一半塞进小木匣，一半推回来。",
+          "selected_anchor": "楚衡才开罐，将全部红灰称成等重两份，各自封好",
+          "expected_doc_ids": [
+            "1799e936-c103-5d18-95aa-bd3bb8fa6b3e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch08-fact1-direct",
+      "scenario_id": "full-ch08-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "沈记誊本比副本多出的两行，分别写了什么？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "03a11b9d-29ed-50a7-8bb2-678913df5918"
+      ],
+      "gold_semantics": "any_of",
+      "category": "誊本增行",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:8",
+      "source_revision": 1,
+      "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+      "reference_answer": "另，崔炉一件，待勘；温肺丹，借。",
+      "judgment_basis": "完整引文直接列出两个增行，不由笔迹推断添加者姓名。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+          "source_revision": 1,
+          "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+          "start": 1141,
+          "end": 1212,
+          "quote": "这份誊本上沈记的条目比副本前页多出两行：一行“另，崔炉一件，待勘”，墨色发淡，是另一只手添的；再一行压在页角，险些被裁口切掉，“温肺丹，借”。",
+          "selected_anchor": "一行“另，崔炉一件，待勘”，墨色发淡，是另一只手添的；再一行压在页角，险些被裁口切掉，“温肺丹，借”。",
+          "expected_doc_ids": [
+            "03a11b9d-29ed-50a7-8bb2-678913df5918"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch08-fact1-paraphrase",
+      "scenario_id": "full-ch08-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "灯下核对那份将上户主会的抄账时，额外添上的两个条目是什么？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "03a11b9d-29ed-50a7-8bb2-678913df5918"
+      ],
+      "gold_semantics": "any_of",
+      "category": "誊本增行",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:8",
+      "source_revision": 1,
+      "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+      "reference_answer": "另，崔炉一件，待勘；温肺丹，借。",
+      "judgment_basis": "完整引文直接列出两个增行，不由笔迹推断添加者姓名。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+          "source_revision": 1,
+          "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+          "start": 1141,
+          "end": 1212,
+          "quote": "这份誊本上沈记的条目比副本前页多出两行：一行“另，崔炉一件，待勘”，墨色发淡，是另一只手添的；再一行压在页角，险些被裁口切掉，“温肺丹，借”。",
+          "selected_anchor": "一行“另，崔炉一件，待勘”，墨色发淡，是另一只手添的；再一行压在页角，险些被裁口切掉，“温肺丹，借”。",
+          "expected_doc_ids": [
+            "03a11b9d-29ed-50a7-8bb2-678913df5918"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch08-fact2-direct",
+      "scenario_id": "full-ch08-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "小满带回的已画圈清单，实际清点了哪四件东西？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "59b3aa8a-31e6-5f9b-8a0a-44469619c445"
+      ],
+      "gold_semantics": "any_of",
+      "category": "清点四件",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:8",
+      "source_revision": 1,
+      "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+      "reference_answer": "火钳一件、砧垫铁两块、蜡封罐一只。",
+      "judgment_basis": "清点结果直接列件数；蜡封没有拆，不能据此推断罐内数量。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+          "source_revision": 1,
+          "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+          "start": 3220,
+          "end": 3260,
+          "quote": "小满又跑来，攥着一张画了圈的清单：“清完了，四样，火钳、两块砧垫铁、一只蜡封罐。",
+          "selected_anchor": "清完了，四样，火钳、两块砧垫铁、一只蜡封罐。",
+          "expected_doc_ids": [
+            "59b3aa8a-31e6-5f9b-8a0a-44469619c445"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch08-fact2-paraphrase",
+      "scenario_id": "full-ch08-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "会前到封铺看件数之后，跑腿少年报回的器具和封罐有哪些、各几件？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "59b3aa8a-31e6-5f9b-8a0a-44469619c445"
+      ],
+      "gold_semantics": "any_of",
+      "category": "清点四件",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:8",
+      "source_revision": 1,
+      "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+      "reference_answer": "火钳一件、砧垫铁两块、蜡封罐一只。",
+      "judgment_basis": "清点结果直接列件数；蜡封没有拆，不能据此推断罐内数量。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "c4cf7dc908f44b2eaa9ad9d78448c785",
+          "source_revision": 1,
+          "source_sha256": "c3eabc4715c26268fa961622e43e239b9730c56bf25169b884bc9db01d74a8b2",
+          "start": 3220,
+          "end": 3260,
+          "quote": "小满又跑来，攥着一张画了圈的清单：“清完了，四样，火钳、两块砧垫铁、一只蜡封罐。",
+          "selected_anchor": "清完了，四样，火钳、两块砧垫铁、一只蜡封罐。",
+          "expected_doc_ids": [
+            "59b3aa8a-31e6-5f9b-8a0a-44469619c445"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch09-fact1-direct",
+      "scenario_id": "full-ch09-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "户主会上楚衡当众启封的两张纸，分别是哪两类账页？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "49e4ae61-b836-5249-82c4-c55a7aa662ca"
+      ],
+      "gold_semantics": "any_of",
+      "category": "公堂还页",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:9",
+      "source_revision": 1,
+      "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+      "reference_answer": "旧账本抽出页与誊本页。",
+      "judgment_basis": "启封还页的现场已发生，两个页面类型有明确并列原句。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+          "source_revision": 1,
+          "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+          "start": 182,
+          "end": 237,
+          "quote": "纸沿封蜡完整，他当着众人撕开，一张旧账本抽出页，一张誊本页，各按着沈砚的手印，摊平了报张数：“两张，一张不差。",
+          "selected_anchor": "一张旧账本抽出页，一张誊本页，各按着沈砚的手印",
+          "expected_doc_ids": [
+            "49e4ae61-b836-5249-82c4-c55a7aa662ca"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch09-fact1-paraphrase",
+      "scenario_id": "full-ch09-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "当夜核对暂扣纸张时，镇守摊开的那一对来源不同的页面是什么？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "49e4ae61-b836-5249-82c4-c55a7aa662ca"
+      ],
+      "gold_semantics": "any_of",
+      "category": "公堂还页",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:9",
+      "source_revision": 1,
+      "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+      "reference_answer": "旧账本抽出页与誊本页。",
+      "judgment_basis": "启封还页的现场已发生，两个页面类型有明确并列原句。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+          "source_revision": 1,
+          "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+          "start": 182,
+          "end": 237,
+          "quote": "纸沿封蜡完整，他当着众人撕开，一张旧账本抽出页，一张誊本页，各按着沈砚的手印，摊平了报张数：“两张，一张不差。",
+          "selected_anchor": "一张旧账本抽出页，一张誊本页，各按着沈砚的手印",
+          "expected_doc_ids": [
+            "49e4ae61-b836-5249-82c4-c55a7aa662ca"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch09-fact2-direct",
+      "scenario_id": "full-ch09-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "小满说散会摸走抄账纸的人往哪条巷子跑？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "c618553b-4564-5d0b-b6e6-6af9f117469b"
+      ],
+      "gold_semantics": "any_of",
+      "category": "摸账逃向",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:9",
+      "source_revision": 1,
+      "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+      "reference_answer": "北巷。",
+      "judgment_basis": "只问小满已回报的逃跑方向；原句明确脸没认清，不推定犯人身份。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+          "source_revision": 1,
+          "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+          "start": 2436,
+          "end": 2494,
+          "quote": "小满看见了，追出去半条街，回来直喘：“砚哥，那人往北巷跑了，我认不清脸，只看见袖口露一截纸边，是抄账的那种格眼纸。”",
+          "selected_anchor": "砚哥，那人往北巷跑了，我认不清脸，只看见袖口露一截纸边，是抄账的那种格眼纸。",
+          "expected_doc_ids": [
+            "c618553b-4564-5d0b-b6e6-6af9f117469b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch09-fact2-paraphrase",
+      "scenario_id": "full-ch09-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "趁户主会混乱偷页的人，按追出去少年的回报，逃向镇里哪个方向的巷道？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "c618553b-4564-5d0b-b6e6-6af9f117469b"
+      ],
+      "gold_semantics": "any_of",
+      "category": "摸账逃向",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:9",
+      "source_revision": 1,
+      "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+      "reference_answer": "北巷。",
+      "judgment_basis": "只问小满已回报的逃跑方向；原句明确脸没认清，不推定犯人身份。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "2c714c772f02416eb97512b54c778af5",
+          "source_revision": 1,
+          "source_sha256": "f6a36e583870c3f95cb75b28f23f728805c2918af162b93d98f16cb7166877e7",
+          "start": 2436,
+          "end": 2494,
+          "quote": "小满看见了，追出去半条街，回来直喘：“砚哥，那人往北巷跑了，我认不清脸，只看见袖口露一截纸边，是抄账的那种格眼纸。”",
+          "selected_anchor": "砚哥，那人往北巷跑了，我认不清脸，只看见袖口露一截纸边，是抄账的那种格眼纸。",
+          "expected_doc_ids": [
+            "c618553b-4564-5d0b-b6e6-6af9f117469b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch10-fact1-direct",
+      "scenario_id": "full-ch10-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "洛蘅回铺后自述，从矿道退出来时，什么东西刮伤了她的小臂？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "a0880ccc-f049-5d55-ba67-749d9c06b45e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜楔刮臂",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:10",
+      "source_revision": 1,
+      "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+      "reference_answer": "借力铜楔的楔头。",
+      "judgment_basis": "洛蘅叙述已发生的受伤动作，不把后续落石肩伤混入此问。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+          "source_revision": 1,
+          "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+          "start": 181,
+          "end": 199,
+          "quote": "退时掰那根铜楔借力，楔头刮了小臂。”",
+          "selected_anchor": "退时掰那根铜楔借力，楔头刮了小臂。",
+          "expected_doc_ids": [
+            "a0880ccc-f049-5d55-ba67-749d9c06b45e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch10-fact1-paraphrase",
+      "scenario_id": "full-ch10-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "按修炉女子回铺后的讲述，她从塌顶处退出借力时，小臂的伤是被哪件工具的哪部分划出的？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "a0880ccc-f049-5d55-ba67-749d9c06b45e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜楔刮臂",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:10",
+      "source_revision": 1,
+      "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+      "reference_answer": "借力铜楔的楔头。",
+      "judgment_basis": "洛蘅叙述已发生的受伤动作，不把后续落石肩伤混入此问。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+          "source_revision": 1,
+          "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+          "start": 181,
+          "end": 199,
+          "quote": "退时掰那根铜楔借力，楔头刮了小臂。”",
+          "selected_anchor": "退时掰那根铜楔借力，楔头刮了小臂。",
+          "expected_doc_ids": [
+            "a0880ccc-f049-5d55-ba67-749d9c06b45e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch10-fact2-direct",
+      "scenario_id": "full-ch10-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "临时借铃听息后，沈砚左手哪里新出现了多大范围的发木？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "49b2f606-4919-549e-9e3e-ee843e9827d7"
+      ],
+      "gold_semantics": "any_of",
+      "category": "听铃新代价",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:10",
+      "source_revision": 1,
+      "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+      "reference_answer": "左掌根木了半圈。",
+      "judgment_basis": "将新增左掌根发木与原有右手三指伤区分；不推论伤势不可逆。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+          "source_revision": 1,
+          "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+          "start": 2341,
+          "end": 2377,
+          "quote": "手离铃时左掌根也木了半圈，右手三指仍旧无知觉，他把铃捧起来交回楚衡手里。",
+          "selected_anchor": "手离铃时左掌根也木了半圈，右手三指仍旧无知觉",
+          "expected_doc_ids": [
+            "49b2f606-4919-549e-9e3e-ee843e9827d7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch10-fact2-paraphrase",
+      "scenario_id": "full-ch10-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "窑前那次比对火路结束时，除旧有右手伤外，另一只手新增的感觉损失落在哪一块？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "49b2f606-4919-549e-9e3e-ee843e9827d7"
+      ],
+      "gold_semantics": "any_of",
+      "category": "听铃新代价",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:10",
+      "source_revision": 1,
+      "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+      "reference_answer": "左掌根木了半圈。",
+      "judgment_basis": "将新增左掌根发木与原有右手三指伤区分；不推论伤势不可逆。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "62cb1b9f099e4d258593aa483c79521e",
+          "source_revision": 1,
+          "source_sha256": "6156ac02745d4c0a47efdbdcb940d5924034e278aa0924b488aacd837077a115",
+          "start": 2341,
+          "end": 2377,
+          "quote": "手离铃时左掌根也木了半圈，右手三指仍旧无知觉，他把铃捧起来交回楚衡手里。",
+          "selected_anchor": "手离铃时左掌根也木了半圈，右手三指仍旧无知觉",
+          "expected_doc_ids": [
+            "49b2f606-4919-549e-9e3e-ee843e9827d7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch11-fact1-direct",
+      "scenario_id": "full-ch11-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "宋文书因楚衡提前开铃，定下扣多久俸银、抵什么亏空？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "f494c3b6-8a7c-58eb-83e3-728346ffcd1d"
+      ],
+      "gold_semantics": "any_of",
+      "category": "提前开铃扣俸",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:11",
+      "source_revision": 1,
+      "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+      "reference_answer": "扣一年俸银，抵灶户火租亏空。",
+      "judgment_basis": "问当堂宣布且楚衡认领的处理条款，不虚构之后实际结算账目。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+          "source_revision": 1,
+          "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+          "start": 315,
+          "end": 338,
+          "quote": "主事者以职俸作保，扣一年俸银，抵灶户火租亏空。",
+          "selected_anchor": "主事者以职俸作保，扣一年俸银，抵灶户火租亏空。",
+          "expected_doc_ids": [
+            "f494c3b6-8a7c-58eb-83e3-728346ffcd1d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch11-fact1-paraphrase",
+      "scenario_id": "full-ch11-fact1",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "擅动封存铜器的责任清算中，镇守被要求拿哪一段俸禄补哪笔欠缺？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "f494c3b6-8a7c-58eb-83e3-728346ffcd1d"
+      ],
+      "gold_semantics": "any_of",
+      "category": "提前开铃扣俸",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:11",
+      "source_revision": 1,
+      "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+      "reference_answer": "扣一年俸银，抵灶户火租亏空。",
+      "judgment_basis": "问当堂宣布且楚衡认领的处理条款，不虚构之后实际结算账目。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+          "source_revision": 1,
+          "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+          "start": 315,
+          "end": 338,
+          "quote": "主事者以职俸作保，扣一年俸银，抵灶户火租亏空。",
+          "selected_anchor": "主事者以职俸作保，扣一年俸银，抵灶户火租亏空。",
+          "expected_doc_ids": [
+            "f494c3b6-8a7c-58eb-83e3-728346ffcd1d"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch11-fact2-direct",
+      "scenario_id": "full-ch11-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "两回试火后，沈砚耳朵哪里出现了出血迹象？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "ba6d3c36-905e-5e9c-aca8-8fb83267253f"
+      ],
+      "gold_semantics": "any_of",
+      "category": "试火耳伤",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:11",
+      "source_revision": 1,
+      "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+      "reference_answer": "右耳耳垂底下出现血迹，棉絮上有针尖大红点。",
+      "judgment_basis": "痛楚、耳垂湿线和红点连续发生；仅描述文本可见代价，不作医学诊断。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+          "source_revision": 1,
+          "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+          "start": 2229,
+          "end": 2299,
+          "quote": "他坐着听炉里细火声，右耳忽然像有人拿细铜丝从耳道往外扯，一丝一丝地疼。抬手按，指腹蹭到耳垂底下湿了一线，就灯下一照，棉絮上洇出针尖大一点红。",
+          "selected_anchor": "右耳忽然像有人拿细铜丝从耳道往外扯，一丝一丝地疼。抬手按，指腹蹭到耳垂底下湿了一线，就灯下一照，棉絮上洇出针尖大一点红。",
+          "expected_doc_ids": [
+            "ba6d3c36-905e-5e9c-aca8-8fb83267253f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch11-fact2-paraphrase",
+      "scenario_id": "full-ch11-fact2",
+      "split": "dev",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "修炉前夜新增的听觉痛楚之后，棉絮上那点血来自哪个部位？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "ba6d3c36-905e-5e9c-aca8-8fb83267253f"
+      ],
+      "gold_semantics": "any_of",
+      "category": "试火耳伤",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:11",
+      "source_revision": 1,
+      "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+      "reference_answer": "右耳耳垂底下出现血迹，棉絮上有针尖大红点。",
+      "judgment_basis": "痛楚、耳垂湿线和红点连续发生；仅描述文本可见代价，不作医学诊断。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "b8222ec5a8e848af926be7509b78c51a",
+          "source_revision": 1,
+          "source_sha256": "720e762d1215749efd05c70d650e0d432b30d9514f6721bddc978a291baa7d2b",
+          "start": 2229,
+          "end": 2299,
+          "quote": "他坐着听炉里细火声，右耳忽然像有人拿细铜丝从耳道往外扯，一丝一丝地疼。抬手按，指腹蹭到耳垂底下湿了一线，就灯下一照，棉絮上洇出针尖大一点红。",
+          "selected_anchor": "右耳忽然像有人拿细铜丝从耳道往外扯，一丝一丝地疼。抬手按，指腹蹭到耳垂底下湿了一线，就灯下一照，棉絮上洇出针尖大一点红。",
+          "expected_doc_ids": [
+            "ba6d3c36-905e-5e9c-aca8-8fb83267253f"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch12-fact1-direct",
+      "scenario_id": "full-ch12-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "旧账本末页记下剩半枚温肺丹由谁、何时服用，是否还有余药？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "334c582b-1a44-5dc1-b07f-bf18a4ab697c"
+      ],
+      "gold_semantics": "any_of",
+      "category": "半丹用尽",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:12",
+      "source_revision": 1,
+      "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+      "reference_answer": "沈砚今日清晨服了半枚，没剩。",
+      "judgment_basis": "服药动作已经发生并当场记账，不把此前留存安排当作服药证据。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+          "source_revision": 1,
+          "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+          "start": 1842,
+          "end": 1862,
+          "quote": "他说，“半枚，今日清晨，沈砚服，没剩。”",
+          "selected_anchor": "半枚，今日清晨，沈砚服，没剩。",
+          "expected_doc_ids": [
+            "334c582b-1a44-5dc1-b07f-bf18a4ab697c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch12-fact1-paraphrase",
+      "scenario_id": "full-ch12-fact1",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "修炉撑不住后，那份最后的护肺药实际落到谁口中，余量又记成多少？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "334c582b-1a44-5dc1-b07f-bf18a4ab697c"
+      ],
+      "gold_semantics": "any_of",
+      "category": "半丹用尽",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:12",
+      "source_revision": 1,
+      "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+      "reference_answer": "沈砚今日清晨服了半枚，没剩。",
+      "judgment_basis": "服药动作已经发生并当场记账，不把此前留存安排当作服药证据。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+          "source_revision": 1,
+          "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+          "start": 1842,
+          "end": 1862,
+          "quote": "他说，“半枚，今日清晨，沈砚服，没剩。”",
+          "selected_anchor": "半枚，今日清晨，沈砚服，没剩。",
+          "expected_doc_ids": [
+            "334c582b-1a44-5dc1-b07f-bf18a4ab697c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch12-fact2-direct",
+      "scenario_id": "full-ch12-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "宋文书记下铜铃两瓣残片仍归谁，衙署暂存哪一份？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "dd6045c7-d2a7-552d-9efc-0ec05530c811"
+      ],
+      "gold_semantics": "any_of",
+      "category": "碎铃权属",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:12",
+      "source_revision": 1,
+      "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+      "reference_answer": "两瓣权属仍归沈记；衙署暂存一瓣核对字据，另一瓣还铺。",
+      "judgment_basis": "问已经宣布并由差役拾取的分配安排；不声称暂存一瓣已经核毕归还。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+          "source_revision": 1,
+          "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+          "start": 1489,
+          "end": 1542,
+          "quote": "宋文书在格眼纸上落笔，声音平，“差役拾残片，两瓣权属仍归沈记。衙署暂存一瓣对字据，核毕送回，另一瓣还铺。”",
+          "selected_anchor": "差役拾残片，两瓣权属仍归沈记。衙署暂存一瓣对字据，核毕送回，另一瓣还铺。",
+          "expected_doc_ids": [
+            "dd6045c7-d2a7-552d-9efc-0ec05530c811"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "full-ch12-fact2-paraphrase",
+      "scenario_id": "full-ch12-fact2",
+      "split": "heldout",
+      "project": "9730fab365eb44d3985896a64253fd7f",
+      "book": "full",
+      "query": "引火毁掉铃后，公堂记录如何区分碎片的所有者与临时保管去向？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "dd6045c7-d2a7-552d-9efc-0ec05530c811"
+      ],
+      "gold_semantics": "any_of",
+      "category": "碎铃权属",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+      "source_chapter_key": "9730fab365eb44d3985896a64253fd7f:1:12",
+      "source_revision": 1,
+      "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+      "reference_answer": "两瓣权属仍归沈记；衙署暂存一瓣核对字据，另一瓣还铺。",
+      "judgment_basis": "问已经宣布并由差役拾取的分配安排；不声称暂存一瓣已经核毕归还。",
+      "evidence_spans": [
+        {
+          "project": "9730fab365eb44d3985896a64253fd7f",
+          "source_chapter_id": "40dc8436e6e842f1b18a7e11b0023878",
+          "source_revision": 1,
+          "source_sha256": "0db0bfb2fb806229d8479a738cac3dc5c495d6dd216b51888496feb485f17700",
+          "start": 1489,
+          "end": 1542,
+          "quote": "宋文书在格眼纸上落笔，声音平，“差役拾残片，两瓣权属仍归沈记。衙署暂存一瓣对字据，核毕送回，另一瓣还铺。”",
+          "selected_anchor": "差役拾残片，两瓣权属仍归沈记。衙署暂存一瓣对字据，核毕送回，另一瓣还铺。",
+          "expected_doc_ids": [
+            "dd6045c7-d2a7-552d-9efc-0ec05530c811"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch01-fact1-direct",
+      "scenario_id": "baseline-ch01-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "首回在镇脉炉听息后，沈砚测试右手哪一根手指，摸起来像隔着什么？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "a7f8cf9a-d306-51d1-bdf1-cdb67517f0ba"
+      ],
+      "gold_semantics": "any_of",
+      "category": "食指初失感",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:1",
+      "source_revision": 1,
+      "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+      "reference_answer": "右手食指，像隔了一层湿棉。",
+      "judgment_basis": "源章明确只有此次被测试的食指；不把后续三指或整臂的代价提前。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+          "source_revision": 1,
+          "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+          "start": 1872,
+          "end": 1925,
+          "quote": "他蹲下来喘了几口，等胸腔里那股闷劲过去，再去摸右手食指——指头肚贴上去，什么也觉不出来了，像隔了一层湿棉。",
+          "selected_anchor": "再去摸右手食指——指头肚贴上去，什么也觉不出来了，像隔了一层湿棉。",
+          "expected_doc_ids": [
+            "a7f8cf9a-d306-51d1-bdf1-cdb67517f0ba"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch01-fact1-paraphrase",
+      "scenario_id": "baseline-ch01-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "炉房那次咳血后，最早被他检查出触觉消失的是哪个指头，叙述用了何种隔层比喻？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "a7f8cf9a-d306-51d1-bdf1-cdb67517f0ba"
+      ],
+      "gold_semantics": "any_of",
+      "category": "食指初失感",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:1",
+      "source_revision": 1,
+      "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+      "reference_answer": "右手食指，像隔了一层湿棉。",
+      "judgment_basis": "源章明确只有此次被测试的食指；不把后续三指或整臂的代价提前。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+          "source_revision": 1,
+          "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+          "start": 1872,
+          "end": 1925,
+          "quote": "他蹲下来喘了几口，等胸腔里那股闷劲过去，再去摸右手食指——指头肚贴上去，什么也觉不出来了，像隔了一层湿棉。",
+          "selected_anchor": "再去摸右手食指——指头肚贴上去，什么也觉不出来了，像隔了一层湿棉。",
+          "expected_doc_ids": [
+            "a7f8cf9a-d306-51d1-bdf1-cdb67517f0ba"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch01-fact2-direct",
+      "scenario_id": "baseline-ch01-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚首回从炉房取回红灰后，用小罐收起，放在旧砧哪里？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "168c4161-651f-5748-b5b7-2deb4de70987"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰罐底角",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:1",
+      "source_revision": 1,
+      "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+      "reference_answer": "旧砧的底角。",
+      "judgment_basis": "已经完成的放置动作有独立原句；不套用完整工作流稿的灶后藏法。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+          "source_revision": 1,
+          "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+          "start": 2799,
+          "end": 2817,
+          "quote": "他拿小罐把灰收起来，放在旧砧的底角。",
+          "selected_anchor": "他拿小罐把灰收起来，放在旧砧的底角。",
+          "expected_doc_ids": [
+            "168c4161-651f-5748-b5b7-2deb4de70987"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch01-fact2-paraphrase",
+      "scenario_id": "baseline-ch01-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "第一次把炉里异色粉末带回家时，盛灰的小容器被摆在哪一处？",
+      "before": 100002,
+      "expected_doc_ids": [
+        "168c4161-651f-5748-b5b7-2deb4de70987"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰罐底角",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:1",
+      "source_revision": 1,
+      "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+      "reference_answer": "旧砧的底角。",
+      "judgment_basis": "已经完成的放置动作有独立原句；不套用完整工作流稿的灶后藏法。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3195562455754b1c86a2bc713f2bcf55",
+          "source_revision": 1,
+          "source_sha256": "cee5ec92c263bc3563ca02cfd48b5c3c38e6d8a9b2e17dccdfc7f173bec3dda4",
+          "start": 2799,
+          "end": 2817,
+          "quote": "他拿小罐把灰收起来，放在旧砧的底角。",
+          "selected_anchor": "他拿小罐把灰收起来，放在旧砧的底角。",
+          "expected_doc_ids": [
+            "168c4161-651f-5748-b5b7-2deb4de70987"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch02-fact1-direct",
+      "scenario_id": "baseline-ch02-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "楚衡给沈砚接三十把铁锨头开刃活，实际预付了多少铜板？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "db6f68fb-7ffc-5933-8b97-8a112709f02e",
+        "e2236eac-cc10-52af-8329-818156c7afcb"
+      ],
+      "gold_semantics": "any_of",
+      "category": "开刃预付",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:2",
+      "source_revision": 1,
+      "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+      "reference_answer": "三十个铜板。",
+      "judgment_basis": "付款已发生；不将旧欠六十铜板与本次预付款混为一笔。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+          "source_revision": 1,
+          "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+          "start": 1935,
+          "end": 1970,
+          "quote": "楚衡拉开抽屉摸出个布袋子，数了三十个铜板推过来，“另一半等活交了再结。",
+          "selected_anchor": "楚衡拉开抽屉摸出个布袋子，数了三十个铜板推过来",
+          "expected_doc_ids": [
+            "db6f68fb-7ffc-5933-8b97-8a112709f02e",
+            "e2236eac-cc10-52af-8329-818156c7afcb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch02-fact1-paraphrase",
+      "scenario_id": "baseline-ch02-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "镇守让铺主为锨头磨刃时，从布袋数出的首笔工钱是多少？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "db6f68fb-7ffc-5933-8b97-8a112709f02e",
+        "e2236eac-cc10-52af-8329-818156c7afcb"
+      ],
+      "gold_semantics": "any_of",
+      "category": "开刃预付",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:2",
+      "source_revision": 1,
+      "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+      "reference_answer": "三十个铜板。",
+      "judgment_basis": "付款已发生；不将旧欠六十铜板与本次预付款混为一笔。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+          "source_revision": 1,
+          "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+          "start": 1935,
+          "end": 1970,
+          "quote": "楚衡拉开抽屉摸出个布袋子，数了三十个铜板推过来，“另一半等活交了再结。",
+          "selected_anchor": "楚衡拉开抽屉摸出个布袋子，数了三十个铜板推过来",
+          "expected_doc_ids": [
+            "db6f68fb-7ffc-5933-8b97-8a112709f02e",
+            "e2236eac-cc10-52af-8329-818156c7afcb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch02-fact2-direct",
+      "scenario_id": "baseline-ch02-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚分给小满多少铜板作添鞋钱，余款打算用来买什么？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "e6b59909-46e1-574f-bd58-55459f01eb31"
+      ],
+      "gold_semantics": "any_of",
+      "category": "给小满添鞋",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:2",
+      "source_revision": 1,
+      "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+      "reference_answer": "十五个铜板给小满添鞋，余款留作买炭。",
+      "judgment_basis": "已经数钱递给小满；鞋和炭的用途是当时明确安排，不声称已购得。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+          "source_revision": 1,
+          "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+          "start": 3796,
+          "end": 3821,
+          "quote": "“这十五个先拿着，替你添双鞋。剩下的我留着买炭。”",
+          "selected_anchor": "这十五个先拿着，替你添双鞋。剩下的我留着买炭。",
+          "expected_doc_ids": [
+            "e6b59909-46e1-574f-bd58-55459f01eb31"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch02-fact2-paraphrase",
+      "scenario_id": "baseline-ch02-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "回铺分配新工钱时，跑腿孩子拿到的鞋钱是多少，师兄留下的那份用途是什么？",
+      "before": 100003,
+      "expected_doc_ids": [
+        "e6b59909-46e1-574f-bd58-55459f01eb31"
+      ],
+      "gold_semantics": "any_of",
+      "category": "给小满添鞋",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:2",
+      "source_revision": 1,
+      "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+      "reference_answer": "十五个铜板给小满添鞋，余款留作买炭。",
+      "judgment_basis": "已经数钱递给小满；鞋和炭的用途是当时明确安排，不声称已购得。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "24657602a03a47a8800e2ecafe446d46",
+          "source_revision": 1,
+          "source_sha256": "da550d78e44b480c547aabce4edd5088a1618e80c21c4ce2dd5b74a33be8411d",
+          "start": 3796,
+          "end": 3821,
+          "quote": "“这十五个先拿着，替你添双鞋。剩下的我留着买炭。”",
+          "selected_anchor": "这十五个先拿着，替你添双鞋。剩下的我留着买炭。",
+          "expected_doc_ids": [
+            "e6b59909-46e1-574f-bd58-55459f01eb31"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch03-fact1-direct",
+      "scenario_id": "baseline-ch03-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅实际用什么材料修补了沈记炭炉的什么部位？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "耐火泥补炉",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:3",
+      "source_revision": 1,
+      "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+      "reference_answer": "调好的耐火泥，抹在炉壁薄处。",
+      "judgment_basis": "引文记录实际抹泥，不只引用她先前提出的修补建议。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+          "source_revision": 1,
+          "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+          "start": 3512,
+          "end": 3554,
+          "quote": "她当真从皮袋里掏出一块油布包，里头是调好的耐火泥，就着炭炉的余温把炉壁薄处抹了一层。",
+          "selected_anchor": "里头是调好的耐火泥，就着炭炉的余温把炉壁薄处抹了一层。",
+          "expected_doc_ids": [
+            "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch03-fact1-paraphrase",
+      "scenario_id": "baseline-ch03-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "来到铺子后，修炉女子从油布包取出的东西，被抹到小炉哪一块？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "耐火泥补炉",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:3",
+      "source_revision": 1,
+      "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+      "reference_answer": "调好的耐火泥，抹在炉壁薄处。",
+      "judgment_basis": "引文记录实际抹泥，不只引用她先前提出的修补建议。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+          "source_revision": 1,
+          "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+          "start": 3512,
+          "end": 3554,
+          "quote": "她当真从皮袋里掏出一块油布包，里头是调好的耐火泥，就着炭炉的余温把炉壁薄处抹了一层。",
+          "selected_anchor": "里头是调好的耐火泥，就着炭炉的余温把炉壁薄处抹了一层。",
+          "expected_doc_ids": [
+            "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch03-fact2-direct",
+      "scenario_id": "baseline-ch03-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "引火做到第几把锨头时，沈砚指头麻木使锨头磕出什么损伤？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "第十七锨崩刃",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:3",
+      "source_revision": 1,
+      "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+      "reference_answer": "第十七把，刃口崩出豁口。",
+      "judgment_basis": "动作序号和实物损伤在同一连续原句中，不能只凭麻木推断失败。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+          "source_revision": 1,
+          "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+          "start": 3682,
+          "end": 3732,
+          "quote": "引到第十七把，右边指头麻得整根发木，夹钳的时候有一瞬间找不准位置，锨头在砧上磕了一下，刃口崩出个豁。",
+          "selected_anchor": "引到第十七把，右边指头麻得整根发木，夹钳的时候有一瞬间找不准位置，锨头在砧上磕了一下，刃口崩出个豁。",
+          "expected_doc_ids": [
+            "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch03-fact2-paraphrase",
+      "scenario_id": "baseline-ch03-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "那批开刃活进行到哪一件时，因为握钳失准而把刃口撞坏？",
+      "before": 100004,
+      "expected_doc_ids": [
+        "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "第十七锨崩刃",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:3",
+      "source_revision": 1,
+      "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+      "reference_answer": "第十七把，刃口崩出豁口。",
+      "judgment_basis": "动作序号和实物损伤在同一连续原句中，不能只凭麻木推断失败。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "169adf323ea445adab8c75a2a228162b",
+          "source_revision": 1,
+          "source_sha256": "c5ec45be0f5f2b094e6d1063f1e950ff04cbce8ae0a9008e6c16b2d524f74b84",
+          "start": 3682,
+          "end": 3732,
+          "quote": "引到第十七把，右边指头麻得整根发木，夹钳的时候有一瞬间找不准位置，锨头在砧上磕了一下，刃口崩出个豁。",
+          "selected_anchor": "引到第十七把，右边指头麻得整根发木，夹钳的时候有一瞬间找不准位置，锨头在砧上磕了一下，刃口崩出个豁。",
+          "expected_doc_ids": [
+            "384cb8a3-6bdb-5833-bf2c-e5774ead1b1e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch04-fact1-direct",
+      "scenario_id": "baseline-ch04-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅数了两遍后，铜片上能看清几道记号，她说每道对应什么？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "c22944d9-5605-5c7b-94e5-0aed95689dcb"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜片七痕",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:4",
+      "source_revision": 1,
+      "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+      "reference_answer": "七道，每道对应一趟活。",
+      "judgment_basis": "问洛蘅在场数出的痕数和解释，不把七趟自动当成七个不同工人。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+          "source_revision": 1,
+          "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+          "start": 2716,
+          "end": 2745,
+          "quote": "“能看清的七道。”洛蘅数了两遍，“每道对应一趟活。七趟。”",
+          "selected_anchor": "能看清的七道。”洛蘅数了两遍，“每道对应一趟活。七趟。",
+          "expected_doc_ids": [
+            "c22944d9-5605-5c7b-94e5-0aed95689dcb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch04-fact1-paraphrase",
+      "scenario_id": "baseline-ch04-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "管架废渣里取出的薄铜上，修炉女子辨出的线痕数量和她给出的计数含义是什么？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "c22944d9-5605-5c7b-94e5-0aed95689dcb"
+      ],
+      "gold_semantics": "any_of",
+      "category": "铜片七痕",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:4",
+      "source_revision": 1,
+      "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+      "reference_answer": "七道，每道对应一趟活。",
+      "judgment_basis": "问洛蘅在场数出的痕数和解释，不把七趟自动当成七个不同工人。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+          "source_revision": 1,
+          "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+          "start": 2716,
+          "end": 2745,
+          "quote": "“能看清的七道。”洛蘅数了两遍，“每道对应一趟活。七趟。”",
+          "selected_anchor": "能看清的七道。”洛蘅数了两遍，“每道对应一趟活。七趟。",
+          "expected_doc_ids": [
+            "c22944d9-5605-5c7b-94e5-0aed95689dcb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch04-fact2-direct",
+      "scenario_id": "baseline-ch04-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "从管架回到铺子时，门板上别着什么，签头缠的绳是什么颜色？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "6e205f5d-7390-5d51-9c3a-e791b951ac2c"
+      ],
+      "gold_semantics": "any_of",
+      "category": "门板红绳签",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:4",
+      "source_revision": 1,
+      "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+      "reference_answer": "一根竹签，签头缠暗红色红绳。",
+      "judgment_basis": "已看见的物证外形，不推定是谁留下或要传何种暗号。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+          "source_revision": 1,
+          "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+          "start": 4551,
+          "end": 4577,
+          "quote": "门板上别着一根竹签，签头上缠了一小圈红绳，红得发暗。",
+          "selected_anchor": "门板上别着一根竹签，签头上缠了一小圈红绳，红得发暗。",
+          "expected_doc_ids": [
+            "6e205f5d-7390-5d51-9c3a-e791b951ac2c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch04-fact2-paraphrase",
+      "scenario_id": "baseline-ch04-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "二人返家发现门上多出的那件小东西是什么，它上面绕着怎样的绳线？",
+      "before": 100005,
+      "expected_doc_ids": [
+        "6e205f5d-7390-5d51-9c3a-e791b951ac2c"
+      ],
+      "gold_semantics": "any_of",
+      "category": "门板红绳签",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:4",
+      "source_revision": 1,
+      "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+      "reference_answer": "一根竹签，签头缠暗红色红绳。",
+      "judgment_basis": "已看见的物证外形，不推定是谁留下或要传何种暗号。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "15378ab853b640aba62faf21b7213b2e",
+          "source_revision": 1,
+          "source_sha256": "8d4880596062efe5f86f92aa46cf4823a599b35383b6232ec8d9fe8f807249d5",
+          "start": 4551,
+          "end": 4577,
+          "quote": "门板上别着一根竹签，签头上缠了一小圈红绳，红得发暗。",
+          "selected_anchor": "门板上别着一根竹签，签头上缠了一小圈红绳，红得发暗。",
+          "expected_doc_ids": [
+            "6e205f5d-7390-5d51-9c3a-e791b951ac2c"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch05-fact1-direct",
+      "scenario_id": "baseline-ch05-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚提出把余半粒丸药转交后，装药的油纸包最终由谁伸手拿了？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "92cdcd79-5658-5dc7-a843-b38497d77add"
+      ],
+      "gold_semantics": "any_of",
+      "category": "半丸油纸转手",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:5",
+      "source_revision": 1,
+      "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+      "reference_answer": "洛蘅。",
+      "judgment_basis": "采用实际拿包的完成句，而非沈砚提出转交时的意向句。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+          "source_revision": 1,
+          "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+          "start": 3533,
+          "end": 3550,
+          "quote": "洛蘅看了他一眼，伸手把油纸包拿了。",
+          "selected_anchor": "洛蘅看了他一眼，伸手把油纸包拿了。",
+          "expected_doc_ids": [
+            "92cdcd79-5658-5dc7-a843-b38497d77add"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch05-fact1-paraphrase",
+      "scenario_id": "baseline-ch05-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "铺主把包药纸放在门闩上劝同伴收下，那份药实际被哪位人物接走？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "92cdcd79-5658-5dc7-a843-b38497d77add"
+      ],
+      "gold_semantics": "any_of",
+      "category": "半丸油纸转手",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:5",
+      "source_revision": 1,
+      "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+      "reference_answer": "洛蘅。",
+      "judgment_basis": "采用实际拿包的完成句，而非沈砚提出转交时的意向句。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+          "source_revision": 1,
+          "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+          "start": 3533,
+          "end": 3550,
+          "quote": "洛蘅看了他一眼，伸手把油纸包拿了。",
+          "selected_anchor": "洛蘅看了他一眼，伸手把油纸包拿了。",
+          "expected_doc_ids": [
+            "92cdcd79-5658-5dc7-a843-b38497d77add"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch05-fact2-direct",
+      "scenario_id": "baseline-ch05-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚把竹签先收进陶罐又拿出，最终插在什么地方？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "92cdcd79-5658-5dc7-a843-b38497d77add"
+      ],
+      "gold_semantics": "any_of",
+      "category": "竹签最终插处",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:5",
+      "source_revision": 1,
+      "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+      "reference_answer": "门后的簸箕把手上。",
+      "judgment_basis": "问当章结束前的最后放置，不将被撤回的陶罐存法当现状。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+          "source_revision": 1,
+          "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+          "start": 3774,
+          "end": 3808,
+          "quote": "沈砚把案上的竹签收进陶罐里，想了想，又拿出来，插在门后的簸箕把手上。",
+          "selected_anchor": "又拿出来，插在门后的簸箕把手上。",
+          "expected_doc_ids": [
+            "92cdcd79-5658-5dc7-a843-b38497d77add"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch05-fact2-paraphrase",
+      "scenario_id": "baseline-ch05-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "为让守门的小满看得到，红绳小签最后被固定在门后哪件物品的哪个部位？",
+      "before": 100006,
+      "expected_doc_ids": [
+        "92cdcd79-5658-5dc7-a843-b38497d77add"
+      ],
+      "gold_semantics": "any_of",
+      "category": "竹签最终插处",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:5",
+      "source_revision": 1,
+      "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+      "reference_answer": "门后的簸箕把手上。",
+      "judgment_basis": "问当章结束前的最后放置，不将被撤回的陶罐存法当现状。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "d993f5c29de34fc8ad14ae2a7d2be0f8",
+          "source_revision": 1,
+          "source_sha256": "b3cf7d415aab2ea32fda02549a26368ab5dec4b6446df4a97cff1c8379134d05",
+          "start": 3774,
+          "end": 3808,
+          "quote": "沈砚把案上的竹签收进陶罐里，想了想，又拿出来，插在门后的簸箕把手上。",
+          "selected_anchor": "又拿出来，插在门后的簸箕把手上。",
+          "expected_doc_ids": [
+            "92cdcd79-5658-5dc7-a843-b38497d77add"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch06-fact1-direct",
+      "scenario_id": "baseline-ch06-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚看结案字据时，纸上沈字的三点水是连笔还是分开写？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "1f76feb1-70d6-5e84-9cd4-5a4b43159648"
+      ],
+      "gold_semantics": "any_of",
+      "category": "签押三点水",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:6",
+      "source_revision": 1,
+      "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+      "reference_answer": "三点水分开写。",
+      "judgment_basis": "只问纸上可见笔画特征；不把不像师父的判断升级为已查明伪造者。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+          "source_revision": 1,
+          "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+          "start": 1739,
+          "end": 1777,
+          "quote": "这张纸上的“沈”字，三点水分开写，撇是撇，捺是捺，板板正正，像临帖临出来的。",
+          "selected_anchor": "这张纸上的“沈”字，三点水分开写，撇是撇，捺是捺，板板正正，像临帖临出来的。",
+          "expected_doc_ids": [
+            "1f76feb1-70d6-5e84-9cd4-5a4b43159648"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch06-fact1-paraphrase",
+      "scenario_id": "baseline-ch06-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "镇守展示的旧案签押中，那个姓氏左旁三点的具体写法是什么？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "1f76feb1-70d6-5e84-9cd4-5a4b43159648"
+      ],
+      "gold_semantics": "any_of",
+      "category": "签押三点水",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:6",
+      "source_revision": 1,
+      "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+      "reference_answer": "三点水分开写。",
+      "judgment_basis": "只问纸上可见笔画特征；不把不像师父的判断升级为已查明伪造者。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+          "source_revision": 1,
+          "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+          "start": 1739,
+          "end": 1777,
+          "quote": "这张纸上的“沈”字，三点水分开写，撇是撇，捺是捺，板板正正，像临帖临出来的。",
+          "selected_anchor": "这张纸上的“沈”字，三点水分开写，撇是撇，捺是捺，板板正正，像临帖临出来的。",
+          "expected_doc_ids": [
+            "1f76feb1-70d6-5e84-9cd4-5a4b43159648"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch06-fact2-direct",
+      "scenario_id": "baseline-ch06-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "回铺后，沈砚怎样包装铜片，又埋在什么位置？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "5b89843a-e551-5268-9257-0f78f2e35582"
+      ],
+      "gold_semantics": "any_of",
+      "category": "油纸埋铜片",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:6",
+      "source_revision": 1,
+      "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+      "reference_answer": "油纸包裹，埋灶后墙根浅坑，以坯砖压实。",
+      "judgment_basis": "连续叙述了包装、挖坑与覆盖动作，不套用另一卷的灰罐藏处。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+          "source_revision": 1,
+          "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+          "start": 3842,
+          "end": 3890,
+          "quote": "他起身走到灶间，搬开灶后的半截坯砖，在墙根底下挖了个浅坑，把铜片拿油纸裹了，埋进去，砖头压严实。",
+          "selected_anchor": "搬开灶后的半截坯砖，在墙根底下挖了个浅坑，把铜片拿油纸裹了，埋进去，砖头压严实。",
+          "expected_doc_ids": [
+            "5b89843a-e551-5268-9257-0f78f2e35582"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch06-fact2-paraphrase",
+      "scenario_id": "baseline-ch06-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "为次日不带证物下管架，他把那枚半山字铜料怎样遮藏在灶边？",
+      "before": 100007,
+      "expected_doc_ids": [
+        "5b89843a-e551-5268-9257-0f78f2e35582"
+      ],
+      "gold_semantics": "any_of",
+      "category": "油纸埋铜片",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:6",
+      "source_revision": 1,
+      "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+      "reference_answer": "油纸包裹，埋灶后墙根浅坑，以坯砖压实。",
+      "judgment_basis": "连续叙述了包装、挖坑与覆盖动作，不套用另一卷的灰罐藏处。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "3ee958d1d715458caa4b6f4fd3c4701a",
+          "source_revision": 1,
+          "source_sha256": "cabd1f6accb0b6124e240e0c311b69f8b37fb4a0953a8c657d9c6780ee0e1445",
+          "start": 3842,
+          "end": 3890,
+          "quote": "他起身走到灶间，搬开灶后的半截坯砖，在墙根底下挖了个浅坑，把铜片拿油纸裹了，埋进去，砖头压严实。",
+          "selected_anchor": "搬开灶后的半截坯砖，在墙根底下挖了个浅坑，把铜片拿油纸裹了，埋进去，砖头压严实。",
+          "expected_doc_ids": [
+            "5b89843a-e551-5268-9257-0f78f2e35582"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch07-fact1-direct",
+      "scenario_id": "baseline-ch07-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "支持封样画押的年轻镇丁，说自己的父亲做什么？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "d68df839-e50b-5ada-964d-693f7c2a06f6"
+      ],
+      "gold_semantics": "any_of",
+      "category": "镇丁父业",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:7",
+      "source_revision": 1,
+      "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+      "reference_answer": "父亲是烧窑的。",
+      "judgment_basis": "问镇丁当场说明的职业背景，不据此认定他的父亲就是某个周姓人物。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+          "source_revision": 1,
+          "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+          "start": 2590,
+          "end": 2630,
+          "quote": "“我爹是烧窑的。”年轻镇丁把肩膀缩了缩，声音没降，“砖缝新泥旧泥，我瞧得出来。”",
+          "selected_anchor": "我爹是烧窑的。”年轻镇丁把肩膀缩了缩，声音没降",
+          "expected_doc_ids": [
+            "d68df839-e50b-5ada-964d-693f7c2a06f6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch07-fact1-paraphrase",
+      "scenario_id": "baseline-ch07-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "那名表示懂得新旧砖泥的在场卫役，用家中长辈从事哪种手艺解释自己的经验？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "d68df839-e50b-5ada-964d-693f7c2a06f6"
+      ],
+      "gold_semantics": "any_of",
+      "category": "镇丁父业",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:7",
+      "source_revision": 1,
+      "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+      "reference_answer": "父亲是烧窑的。",
+      "judgment_basis": "问镇丁当场说明的职业背景，不据此认定他的父亲就是某个周姓人物。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+          "source_revision": 1,
+          "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+          "start": 2590,
+          "end": 2630,
+          "quote": "“我爹是烧窑的。”年轻镇丁把肩膀缩了缩，声音没降，“砖缝新泥旧泥，我瞧得出来。”",
+          "selected_anchor": "我爹是烧窑的。”年轻镇丁把肩膀缩了缩，声音没降",
+          "expected_doc_ids": [
+            "d68df839-e50b-5ada-964d-693f7c2a06f6"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch07-fact2-direct",
+      "scenario_id": "baseline-ch07-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅取泥样和废渣后，叫陈四在两只样袋上写下哪两类信息？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "88a4d735-071e-5adb-a8b4-f452f0020ae8"
+      ],
+      "gold_semantics": "any_of",
+      "category": "样袋定位",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:7",
+      "source_revision": 1,
+      "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+      "reference_answer": "时辰和位置。",
+      "judgment_basis": "封袋标记已实际写下；不声称吴司事因此签了封样条。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+          "source_revision": 1,
+          "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+          "start": 3017,
+          "end": 3059,
+          "quote": "洛蘅拿皮袋取了泥样和废渣，各封一只小袋，袋口用麻绳扎了，叫陈四在袋上写了时辰和位置。",
+          "selected_anchor": "叫陈四在袋上写了时辰和位置。",
+          "expected_doc_ids": [
+            "88a4d735-071e-5adb-a8b4-f452f0020ae8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch07-fact2-paraphrase",
+      "scenario_id": "baseline-ch07-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "为记录此次现场取样，那位只负责写字的人在袋面标注了哪些时间与地点要素？",
+      "before": 100008,
+      "expected_doc_ids": [
+        "88a4d735-071e-5adb-a8b4-f452f0020ae8"
+      ],
+      "gold_semantics": "any_of",
+      "category": "样袋定位",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:7",
+      "source_revision": 1,
+      "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+      "reference_answer": "时辰和位置。",
+      "judgment_basis": "封袋标记已实际写下；不声称吴司事因此签了封样条。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "e77afc4cee7c4517a1202b085c95cf4a",
+          "source_revision": 1,
+          "source_sha256": "52a80d01376e51b0ffe3ca92e16ace147b4292383c92ab7cc3d19636939ec259",
+          "start": 3017,
+          "end": 3059,
+          "quote": "洛蘅拿皮袋取了泥样和废渣，各封一只小袋，袋口用麻绳扎了，叫陈四在袋上写了时辰和位置。",
+          "selected_anchor": "叫陈四在袋上写了时辰和位置。",
+          "expected_doc_ids": [
+            "88a4d735-071e-5adb-a8b4-f452f0020ae8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch08-fact1-direct",
+      "scenario_id": "baseline-ch08-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅看到黄皮账沈记垫数栏，担保人和私接火数分别记成什么？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "73f78495-56be-58b2-b01c-802f2f499453"
+      ],
+      "gold_semantics": "any_of",
+      "category": "黄册担保数",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:8",
+      "source_revision": 1,
+      "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+      "reference_answer": "老沈匠，两千四百勾。",
+      "judgment_basis": "仅描述洛蘅看到的特定账栏，不将账面数字当作真实借款或实际付款。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+          "source_revision": 1,
+          "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+          "start": 650,
+          "end": 702,
+          "quote": "垫数栏里，担保人写的是老沈匠，私接火数记了两千四百勾，底下有行小字：“代周记垫，周记无担保，转沈记名。”",
+          "selected_anchor": "担保人写的是老沈匠，私接火数记了两千四百勾",
+          "expected_doc_ids": [
+            "73f78495-56be-58b2-b01c-802f2f499453"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch08-fact1-paraphrase",
+      "scenario_id": "baseline-ch08-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "料院混入后翻到的那本黄色总目，在铺子担保项下列了谁的名字及多少勾？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "73f78495-56be-58b2-b01c-802f2f499453"
+      ],
+      "gold_semantics": "any_of",
+      "category": "黄册担保数",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:8",
+      "source_revision": 1,
+      "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+      "reference_answer": "老沈匠，两千四百勾。",
+      "judgment_basis": "仅描述洛蘅看到的特定账栏，不将账面数字当作真实借款或实际付款。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+          "source_revision": 1,
+          "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+          "start": 650,
+          "end": 702,
+          "quote": "垫数栏里，担保人写的是老沈匠，私接火数记了两千四百勾，底下有行小字：“代周记垫，周记无担保，转沈记名。”",
+          "selected_anchor": "担保人写的是老沈匠，私接火数记了两千四百勾",
+          "expected_doc_ids": [
+            "73f78495-56be-58b2-b01c-802f2f499453"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch08-fact2-direct",
+      "scenario_id": "baseline-ch08-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "黑皮册子夹页最底下，朱笔圈出的沈记记录原文是什么？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "850a53ad-8c30-5dfb-a09f-286140b374b7"
+      ],
+      "gold_semantics": "any_of",
+      "category": "夹页朱圈原文",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:8",
+      "source_revision": 1,
+      "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+      "reference_answer": "沈记垫数，查无实付。",
+      "judgment_basis": "直接问可见文字，不试图消解本章其他财务解释中的张力或矛盾。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+          "source_revision": 1,
+          "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+          "start": 3351,
+          "end": 3409,
+          "quote": "纸条是从账册上撕下来的，边口毛糙，上头密密麻麻记着人名和数目，最底下一行用朱笔圈了，写的是：“沈记垫数，查无实付。”",
+          "selected_anchor": "沈记垫数，查无实付。",
+          "expected_doc_ids": [
+            "850a53ad-8c30-5dfb-a09f-286140b374b7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch08-fact2-paraphrase",
+      "scenario_id": "baseline-ch08-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅后来带回的那张撕下账纸，红圈标出的关于铺子垫款的那句话怎么写？",
+      "before": 100009,
+      "expected_doc_ids": [
+        "850a53ad-8c30-5dfb-a09f-286140b374b7"
+      ],
+      "gold_semantics": "any_of",
+      "category": "夹页朱圈原文",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:8",
+      "source_revision": 1,
+      "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+      "reference_answer": "沈记垫数，查无实付。",
+      "judgment_basis": "直接问可见文字，不试图消解本章其他财务解释中的张力或矛盾。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "1bf25b1d40e3498fbadc5dac1114a86b",
+          "source_revision": 1,
+          "source_sha256": "eaf1e86e5f5a480f557eb67772fc87af447813b240f2fc916bebd9d990e26404",
+          "start": 3351,
+          "end": 3409,
+          "quote": "纸条是从账册上撕下来的，边口毛糙，上头密密麻麻记着人名和数目，最底下一行用朱笔圈了，写的是：“沈记垫数，查无实付。”",
+          "selected_anchor": "沈记垫数，查无实付。",
+          "expected_doc_ids": [
+            "850a53ad-8c30-5dfb-a09f-286140b374b7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch09-fact1-direct",
+      "scenario_id": "baseline-ch09-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅回铺后说，矿上如今挂名的管事姓什么、叫什么？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "be704eb8-3974-5d79-a4eb-f9f12d96414a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "矿管挂名",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:9",
+      "source_revision": 1,
+      "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+      "reference_answer": "鲁礼。",
+      "judgment_basis": "原句直接说明姓名；不由挂名管事推断其已被证实参与失踪案。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+          "source_revision": 1,
+          "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+          "start": 3409,
+          "end": 3430,
+          "quote": "“矿上如今挂名的管事姓鲁，单名一个礼字。”",
+          "selected_anchor": "矿上如今挂名的管事姓鲁，单名一个礼字。",
+          "expected_doc_ids": [
+            "be704eb8-3974-5d79-a4eb-f9f12d96414a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch09-fact1-paraphrase",
+      "scenario_id": "baseline-ch09-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "户主会后修炉女子报告的现任矿区名义负责人，其完整姓名是什么？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "be704eb8-3974-5d79-a4eb-f9f12d96414a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "矿管挂名",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:9",
+      "source_revision": 1,
+      "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+      "reference_answer": "鲁礼。",
+      "judgment_basis": "原句直接说明姓名；不由挂名管事推断其已被证实参与失踪案。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+          "source_revision": 1,
+          "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+          "start": 3409,
+          "end": 3430,
+          "quote": "“矿上如今挂名的管事姓鲁，单名一个礼字。”",
+          "selected_anchor": "矿上如今挂名的管事姓鲁，单名一个礼字。",
+          "expected_doc_ids": [
+            "be704eb8-3974-5d79-a4eb-f9f12d96414a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch09-fact2-direct",
+      "scenario_id": "baseline-ch09-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈记招牌被砸后，砸牌物是什么，落在门口哪里？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "415c777f-b015-52a0-992d-cd09916a6611"
+      ],
+      "gold_semantics": "any_of",
+      "category": "砸牌砖块",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:9",
+      "source_revision": 1,
+      "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+      "reference_answer": "半截青砖，滚在门阶底下。",
+      "judgment_basis": "问现场物证，不根据陈婶的神态认定投砖者身份。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+          "source_revision": 1,
+          "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+          "start": 2750,
+          "end": 2768,
+          "quote": "砸的是一块半截青砖，还滚在门阶底下。",
+          "selected_anchor": "砸的是一块半截青砖，还滚在门阶底下。",
+          "expected_doc_ids": [
+            "415c777f-b015-52a0-992d-cd09916a6611"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch09-fact2-paraphrase",
+      "scenario_id": "baseline-ch09-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "赶回巷口看见旧木匾新裂口时，台阶底下还留着怎样的致损物？",
+      "before": 100010,
+      "expected_doc_ids": [
+        "415c777f-b015-52a0-992d-cd09916a6611"
+      ],
+      "gold_semantics": "any_of",
+      "category": "砸牌砖块",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:9",
+      "source_revision": 1,
+      "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+      "reference_answer": "半截青砖，滚在门阶底下。",
+      "judgment_basis": "问现场物证，不根据陈婶的神态认定投砖者身份。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "f8a2bf16187443c4a50100f56a6d78f4",
+          "source_revision": 1,
+          "source_sha256": "ea74d41688a17e51f308372254e6b1fe7308a9750fb249c10b24128a7bd9e683",
+          "start": 2750,
+          "end": 2768,
+          "quote": "砸的是一块半截青砖，还滚在门阶底下。",
+          "selected_anchor": "砸的是一块半截青砖，还滚在门阶底下。",
+          "expected_doc_ids": [
+            "415c777f-b015-52a0-992d-cd09916a6611"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch10-fact1-direct",
+      "scenario_id": "baseline-ch10-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚把小满带回的红灰撒进灶火试烧，火苗腾起什么颜色？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "b6fbb8d1-259c-5e20-bb49-363379aea124"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰样试烧色",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:10",
+      "source_revision": 1,
+      "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+      "reference_answer": "蓝绿色。",
+      "judgment_basis": "真实发生的撒灰试烧与颜色反应；不要求推导化学成分。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+          "source_revision": 1,
+          "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+          "start": 593,
+          "end": 617,
+          "quote": "他把灰撒进灶膛火里试，火苗舔过，腾起一小片蓝绿。",
+          "selected_anchor": "他把灰撒进灶膛火里试，火苗舔过，腾起一小片蓝绿。",
+          "expected_doc_ids": [
+            "b6fbb8d1-259c-5e20-bb49-363379aea124"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch10-fact1-paraphrase",
+      "scenario_id": "baseline-ch10-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "矿道口取来的那撮粉末实际入火检验时，冒出的色光是什么？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "b6fbb8d1-259c-5e20-bb49-363379aea124"
+      ],
+      "gold_semantics": "any_of",
+      "category": "灰样试烧色",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:10",
+      "source_revision": 1,
+      "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+      "reference_answer": "蓝绿色。",
+      "judgment_basis": "真实发生的撒灰试烧与颜色反应；不要求推导化学成分。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+          "source_revision": 1,
+          "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+          "start": 593,
+          "end": 617,
+          "quote": "他把灰撒进灶膛火里试，火苗舔过，腾起一小片蓝绿。",
+          "selected_anchor": "他把灰撒进灶膛火里试，火苗舔过，腾起一小片蓝绿。",
+          "expected_doc_ids": [
+            "b6fbb8d1-259c-5e20-bb49-363379aea124"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch10-fact2-direct",
+      "scenario_id": "baseline-ch10-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "夜里回铺后，沈砚怎样包楚衡给的抄本，塞在何处？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "7bd58e16-2572-5613-babc-9a8aa68f7073"
+      ],
+      "gold_semantics": "any_of",
+      "category": "新抄本入坑",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:10",
+      "source_revision": 1,
+      "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+      "reference_answer": "油纸包裹，塞入灶后墙根新挖深的坑。",
+      "judgment_basis": "采用已完成的藏纸动作，不用楚衡禁止外传的约定替代实际去向。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+          "source_revision": 1,
+          "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+          "start": 4065,
+          "end": 4117,
+          "quote": "沈砚没叫醒他，把抄本拿油纸裹了，塞进灶后墙根底下那个新挖深的坑里，铜片、夹页、描账纸都在，如今又添一份。",
+          "selected_anchor": "把抄本拿油纸裹了，塞进灶后墙根底下那个新挖深的坑里",
+          "expected_doc_ids": [
+            "7bd58e16-2572-5613-babc-9a8aa68f7073"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch10-fact2-paraphrase",
+      "scenario_id": "baseline-ch10-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "镇守从总目摘出的那卷纸被带回家后，铺主把它包好藏到了哪个已有的隐匿点？",
+      "before": 100011,
+      "expected_doc_ids": [
+        "7bd58e16-2572-5613-babc-9a8aa68f7073"
+      ],
+      "gold_semantics": "any_of",
+      "category": "新抄本入坑",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:10",
+      "source_revision": 1,
+      "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+      "reference_answer": "油纸包裹，塞入灶后墙根新挖深的坑。",
+      "judgment_basis": "采用已完成的藏纸动作，不用楚衡禁止外传的约定替代实际去向。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "436c0bca0b8b456ba194c73cdf10d392",
+          "source_revision": 1,
+          "source_sha256": "c5c755ec9d3a2a7c30e5475c57788ff311efd764bf9ece4e0078d986ac2d9c15",
+          "start": 4065,
+          "end": 4117,
+          "quote": "沈砚没叫醒他，把抄本拿油纸裹了，塞进灶后墙根底下那个新挖深的坑里，铜片、夹页、描账纸都在，如今又添一份。",
+          "selected_anchor": "把抄本拿油纸裹了，塞进灶后墙根底下那个新挖深的坑里",
+          "expected_doc_ids": [
+            "7bd58e16-2572-5613-babc-9a8aa68f7073"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch11-fact1-direct",
+      "scenario_id": "baseline-ch11-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "沈砚卖掉旧铁砧后，铁砧留在谁的铺子门口？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "21178aad-48e4-5cf7-92da-79e9aa19139e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "卖砧留赵铺",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:11",
+      "source_revision": 1,
+      "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+      "reference_answer": "老赵的铺子门口。",
+      "judgment_basis": "实物已交易且留在买方门口；不把之前‘要卖’的意向作为完成证据。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+          "source_revision": 1,
+          "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+          "start": 1125,
+          "end": 1165,
+          "quote": "铁砧留在老赵铺子门口，车推出去十几步，他回头看了一眼，那块锈铁还在原地晒着太阳。",
+          "selected_anchor": "铁砧留在老赵铺子门口",
+          "expected_doc_ids": [
+            "21178aad-48e4-5cf7-92da-79e9aa19139e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch11-fact1-paraphrase",
+      "scenario_id": "baseline-ch11-fact1",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "为筹灯油和炭钱让出的那件老家当，交易后最终摆在哪位铁匠店前？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "21178aad-48e4-5cf7-92da-79e9aa19139e"
+      ],
+      "gold_semantics": "any_of",
+      "category": "卖砧留赵铺",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:11",
+      "source_revision": 1,
+      "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+      "reference_answer": "老赵的铺子门口。",
+      "judgment_basis": "实物已交易且留在买方门口；不把之前‘要卖’的意向作为完成证据。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+          "source_revision": 1,
+          "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+          "start": 1125,
+          "end": 1165,
+          "quote": "铁砧留在老赵铺子门口，车推出去十几步，他回头看了一眼，那块锈铁还在原地晒着太阳。",
+          "selected_anchor": "铁砧留在老赵铺子门口",
+          "expected_doc_ids": [
+            "21178aad-48e4-5cf7-92da-79e9aa19139e"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch11-fact2-direct",
+      "scenario_id": "baseline-ch11-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅离开前留下几丸清肺丸，用什么纸包着？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "2718898a-9b6f-5692-a63b-94e199cc5913"
+      ],
+      "gold_semantics": "any_of",
+      "category": "两丸蜡纸药",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:11",
+      "source_revision": 1,
+      "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+      "reference_answer": "两丸清肺丸，用蜡纸包着。",
+      "judgment_basis": "打开药包的实际清点；与另一卷一整枚温肺丹的数量和药名分别保留。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+          "source_revision": 1,
+          "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+          "start": 3149,
+          "end": 3187,
+          "quote": "沈砚把她留下的药包打开，两丸清肺丸用蜡纸包着，旁边还有一小截她拓印剩下的墨。",
+          "selected_anchor": "两丸清肺丸用蜡纸包着，旁边还有一小截她拓印剩下的墨。",
+          "expected_doc_ids": [
+            "2718898a-9b6f-5692-a63b-94e199cc5913"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch11-fact2-paraphrase",
+      "scenario_id": "baseline-ch11-fact2",
+      "split": "heldout",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "同伴走后铺主打开药包，实际看到多少颗清肺药，外层包材是什么？",
+      "before": 100012,
+      "expected_doc_ids": [
+        "2718898a-9b6f-5692-a63b-94e199cc5913"
+      ],
+      "gold_semantics": "any_of",
+      "category": "两丸蜡纸药",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:11",
+      "source_revision": 1,
+      "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+      "reference_answer": "两丸清肺丸，用蜡纸包着。",
+      "judgment_basis": "打开药包的实际清点；与另一卷一整枚温肺丹的数量和药名分别保留。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "8d50591da4a848298df05bcacc9c4173",
+          "source_revision": 1,
+          "source_sha256": "d8d5435a5bc3dc3595ac6cb221421074988e3e86dc71e62d2985cc9456cec026",
+          "start": 3149,
+          "end": 3187,
+          "quote": "沈砚把她留下的药包打开，两丸清肺丸用蜡纸包着，旁边还有一小截她拓印剩下的墨。",
+          "selected_anchor": "两丸清肺丸用蜡纸包着，旁边还有一小截她拓印剩下的墨。",
+          "expected_doc_ids": [
+            "2718898a-9b6f-5692-a63b-94e199cc5913"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch12-fact1-direct",
+      "scenario_id": "baseline-ch12-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "傍晚镇上传下核账结果，旧账分几年还，加罚数怎样处理？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "2618d1de-f3d4-581b-a449-8ee9bbb13d2a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "旧账分年",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:12",
+      "source_revision": 1,
+      "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+      "reference_answer": "按户分摊，分三年还，加罚数抹了大半。",
+      "judgment_basis": "问已经传下的核账条款，不把分三年还解释为债已实际还清。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+          "source_revision": 1,
+          "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+          "start": 2869,
+          "end": 2909,
+          "quote": "到傍晚，镇里传下话来：旧账按户分摊，分三年还，加罚数抹了大半，楚衡的存记抵作保。",
+          "selected_anchor": "旧账按户分摊，分三年还，加罚数抹了大半，楚衡的存记抵作保。",
+          "expected_doc_ids": [
+            "2618d1de-f3d4-581b-a449-8ee9bbb13d2a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch12-fact1-paraphrase",
+      "scenario_id": "baseline-ch12-fact1",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "巡使核账后公布的还款安排，要求欠款分摊多长时间，额外罚款留下多少？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "2618d1de-f3d4-581b-a449-8ee9bbb13d2a"
+      ],
+      "gold_semantics": "any_of",
+      "category": "旧账分年",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:12",
+      "source_revision": 1,
+      "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+      "reference_answer": "按户分摊，分三年还，加罚数抹了大半。",
+      "judgment_basis": "问已经传下的核账条款，不把分三年还解释为债已实际还清。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+          "source_revision": 1,
+          "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+          "start": 2869,
+          "end": 2909,
+          "quote": "到傍晚，镇里传下话来：旧账按户分摊，分三年还，加罚数抹了大半，楚衡的存记抵作保。",
+          "selected_anchor": "旧账按户分摊，分三年还，加罚数抹了大半，楚衡的存记抵作保。",
+          "expected_doc_ids": [
+            "2618d1de-f3d4-581b-a449-8ee9bbb13d2a"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch12-fact2-direct",
+      "scenario_id": "baseline-ch12-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "洛蘅来信说，同门的一枚钎子在矿道什么位置找到？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "71f0e6a2-17b8-50f2-8b84-b4c67dc04635"
+      ],
+      "gold_semantics": "any_of",
+      "category": "来信钎子位置",
+      "query_subset": "direct",
+      "answerability": "answerable",
+      "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:12",
+      "source_revision": 1,
+      "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+      "reference_answer": "第三段废巷往里第七步处。",
+      "judgment_basis": "只问来信已报告的物证位置，不由工具发现断定同门已获救。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+          "source_revision": 1,
+          "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+          "start": 3346,
+          "end": 3418,
+          "quote": "他拆开，里头一张纸，字迹是洛蘅的，写得简短：塌方道口再验过，在第三段废巷往里第七步处，找到同门钎子一枚，钎柄卷了半截带灰的麻绳，与旧窑红绳同色。",
+          "selected_anchor": "在第三段废巷往里第七步处，找到同门钎子一枚",
+          "expected_doc_ids": [
+            "71f0e6a2-17b8-50f2-8b84-b4c67dc04635"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "baseline-ch12-fact2-paraphrase",
+      "scenario_id": "baseline-ch12-fact2",
+      "split": "dev",
+      "project": "815825904710442c9e549e83f140c725",
+      "book": "baseline",
+      "query": "结尾收到的寻人信中，实际发现那件修炉工具的位置，按废巷段数和步数怎么描述？",
+      "before": 100013,
+      "expected_doc_ids": [
+        "71f0e6a2-17b8-50f2-8b84-b4c67dc04635"
+      ],
+      "gold_semantics": "any_of",
+      "category": "来信钎子位置",
+      "query_subset": "paraphrase",
+      "answerability": "answerable",
+      "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+      "source_chapter_key": "815825904710442c9e549e83f140c725:1:12",
+      "source_revision": 1,
+      "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+      "reference_answer": "第三段废巷往里第七步处。",
+      "judgment_basis": "只问来信已报告的物证位置，不由工具发现断定同门已获救。",
+      "evidence_spans": [
+        {
+          "project": "815825904710442c9e549e83f140c725",
+          "source_chapter_id": "b2ef6d7427fe4321bed8dfd249a051c4",
+          "source_revision": 1,
+          "source_sha256": "bb975b8510580bc393984ec04d6124387b8fd0f7a58a36d9513de2a81b71507a",
+          "start": 3346,
+          "end": 3418,
+          "quote": "他拆开，里头一张纸，字迹是洛蘅的，写得简短：塌方道口再验过，在第三段废巷往里第七步处，找到同门钎子一枚，钎柄卷了半截带灰的麻绳，与旧窑红绳同色。",
+          "selected_anchor": "在第三段废巷往里第七步处，找到同门钎子一枚",
+          "expected_doc_ids": [
+            "71f0e6a2-17b8-50f2-8b84-b4c67dc04635"
+          ]
+        }
+      ]
+    }
+  ]
+}

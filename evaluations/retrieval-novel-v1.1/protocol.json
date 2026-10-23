@@ -1,0 +1,141 @@
+{
+  "version": "novel-v1.1",
+  "frozen_date": "2026-10-21",
+  "seed": 2026102102,
+  "source": {
+    "authority": "data/studio.sqlite以mode=ro读取两作品的24章当前canonical；源正文与原评测均未改写",
+    "project_ids": {
+      "full": "9730fab365eb44d3985896a64253fd7f",
+      "baseline": "815825904710442c9e549e83f140c725"
+    },
+    "export_sha256": {
+      "full-novel.md": "cf1ceacb084cfbd8e318bd9dfd579db04f1f39b8189c165ea521faf28cf78139",
+      "baseline-novel.md": "afff8c766931743f38d15b12fd4a8653a9f3b35696921107969bf1ea2a04f9ca"
+    },
+    "chapter_revisions_and_body_sha256": "corpus.sources逐章保存；不以可变数据库文件整体哈希代替正文快照"
+  },
+  "counts": {
+    "books": 2,
+    "source_chapters": 24,
+    "scenarios": 48,
+    "queries": 96,
+    "documents": 245,
+    "dev_chapters": 8,
+    "heldout_chapters": 16,
+    "dev_scenarios": 16,
+    "heldout_scenarios": 32,
+    "dev_queries": 32,
+    "heldout_queries": 64,
+    "quotes": 48,
+    "scenarios_with_overlapping_gold_alternatives": 5
+  },
+  "split": {
+    "unit": "source_chapter_id",
+    "development_chapter_numbers": {
+      "full": [
+        1,
+        4,
+        7,
+        11
+      ],
+      "baseline": [
+        1,
+        5,
+        8,
+        12
+      ]
+    },
+    "procedure": "Random(2026102102)按完整稿、基线稿顺序各抽4/12章作dev，其余8/12章heldout；两事实和其两种问法跟随来源章，不拆到两边",
+    "caveat": "24章来自同一初始设定的两卷，章间相关，48情境或96问法都不是独立作者/独立小说样本；推断应按来源章节聚合，题干改述不增加独立样本量。"
+  },
+  "annotation": {
+    "method": "Codex AI逐章阅读全文，每章选两个具体事实与两种问法，人工式AI判断明确引文及答案，不使用检索排名或被测系统输出来出题。",
+    "scope": "动作、归属、数量、代价、条款与可见物证；叙述/人物发言/账面文字分别在题干与依据注明；不从账面推定真实债务，不把承诺当完成。",
+    "not_human_gold": "这不是自然人专家标注；单AI仍可能遗漏更早章节同事实表达或误解故事，参考答案用于审阅，指标只检验预先指定的证据来源。",
+    "quote_span": "字符索引按Python Unicode字符串[start:end)，不按UTF-8字节；原始anchor向相邻完整句边界扩展，quote与源章逐字相等，所有gold块完整包含该quote。"
+  },
+  "chunking": {
+    "characters": 450,
+    "stride": 380,
+    "overlap": 70,
+    "id": "uuid5(NAMESPACE_URL, f'{chapter_id}/{canonical_revision}/{chunk_index}')；与已交付生产切片键规则一致",
+    "gold_semantics": "any_of：同一quote可能落入两个重叠块，命中其中任一块即该情境证据命中；不得要求同时找回重叠副本，也不得用召回副本比例稀释得分。"
+  },
+  "eligibility": {
+    "project": "仅目标project；另一卷具有同名人物与相似事件，是自然跨作品干扰",
+    "time": "before=源章volume*100000+chapter+1；仅position<before有效，源章可用，后文真实章节作为未来干扰",
+    "version": "只有当前canonical，stale=false；此套件不人工添加旧版、近重复或32份未来压力副本"
+  },
+  "recommended_metrics": [
+    "any-gold Hit/Recall@k（二元）与首个合法gold的MRR；每情境两问先平均，再按来源章聚合",
+    "未来/跨作品/失效来源泄漏与合法候选返回数量分开报告",
+    "直接问法与改述子集分报；改述仅为词面差异，不宣称只有向量才能解答",
+    "如计算区间或配对重采样，至少按来源章节聚类；两卷同设定的相关性另披露",
+    "冷/热时延与实际启用渠道另列；不据检索命中推定文学质量或生成事实正确率"
+  ],
+  "freeze_policy": "此数据独立于v2构造和排序实现；只读小说来源，不看v2结果逐项或新排序实现；冻结后不因heldout输赢改题、gold或split。生成器不调用检索、收费模型或heldout评估。",
+  "limitations": [
+    "新题来自已经用于开发和交付的小说文本，不是新作者/新故事外部泛化集；仅问句与gold新冻结",
+    "只有两卷共用设定的玄幻短卷；完整稿含Codex外部编辑，不能归因于纯DeepSeek创作能力",
+    "这套件检验真实小说正文上的指定来源检索，不检验自然长篇遗忘率、事实自动提取或百万字承载",
+    "48条引文与96问法相关；两问法不是96个独立事实，24来源章也不是24部独立小说",
+    "没有无答案题，不可从本套件得出拒答率、幻觉率或答案faithfulness结论",
+    "gold只列源章完整包含指定引文的块；更早章可能有可替代的相关表述，不能把gold未命中直接称内容错误"
+  ],
+  "sha256": {
+    "corpus.json": "d39e5f6a570ed93d87a3091f931e312be86e202f03f0ef40e5f3bfecac3d573b",
+    "queries.json": "ce61331c4e274772358a7b7e6f0f2e89bfb367ce34e3c73281533121b6e1cef7"
+  },
+  "validation": {
+    "status": "passed",
+    "checks": [
+      "父版三文件SHA与预先固定值完全一致，运行后再次核验",
+      "新corpus字节与父版相同",
+      "仅四个指定query字符串变化，其余查询字段和所有源数据不变",
+      "96唯一问句、48事实情境、dev32问/heldout64问不变",
+      "全部gold项目、时序、版本、span与完整引文逐字匹配不变",
+      "未执行检索或评分"
+    ]
+  },
+  "parent_sha256": {
+    "corpus.json": "d39e5f6a570ed93d87a3091f931e312be86e202f03f0ef40e5f3bfecac3d573b",
+    "queries.json": "094046cff71718694ddcc42509eb2552e7d46ee604043c813fc810776b4b281f",
+    "protocol.json": "890af599cbdf49d8afac864ee6a10452009e88393faa477e0d9e3a13d9aeda6e"
+  },
+  "revision": {
+    "revised_at": "2026-10-21T15:41:40+08:00",
+    "parent_dataset": "retrieval-novel-v1",
+    "review_source": "/root/novel_oracle_audit 独立AI oracle复核，经root转交两项P3来源归因措辞更正",
+    "kind": "annotation_erratum",
+    "errata": [
+      {
+        "scenario_id": "full-ch07-fact1",
+        "query_ids": [
+          "full-ch07-fact1-direct",
+          "full-ch07-fact1-paraphrase"
+        ],
+        "field": "query",
+        "correction": "问句明确限定为洛蘅回铺后自述，保留人物报告的来源属性，不将自述升格为叙述者独立核实。",
+        "severity": "P3"
+      },
+      {
+        "scenario_id": "full-ch10-fact1",
+        "query_ids": [
+          "full-ch10-fact1-direct",
+          "full-ch10-fact1-paraphrase"
+        ],
+        "field": "query",
+        "correction": "问句明确限定为洛蘅回铺后自述，保留人物报告的来源属性，不将自述升格为叙述者独立核实。",
+        "severity": "P3"
+      }
+    ],
+    "unchanged": [
+      "corpus.json逐字节与v1相同",
+      "来源正文、revision、SHA、quote、span、gold及any_of语义",
+      "所有split、before、类别与reference_answer",
+      "48情境与96问法的分母；不是新增独立样本"
+    ],
+    "score_independence": "仅依独立来源归因复核修正；修订者未读取dev或heldout分数、排名或未来排序实现，未按得分挑题。v1原输入与已运行结果全部保留，后续验收应注明使用v1.1。",
+    "format_version": "corpus.version与queries.version保留父版novel-v1以确保除四个query字段外输入完全不变；数据集修订号由本protocol.version标识。"
+  }
+}
