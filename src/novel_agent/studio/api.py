@@ -400,6 +400,10 @@ def create_app(root: Path = ROOT, model=None):
     async def resume(rid: str):
         return await app.state.engine.resume(rid)
 
+    @app.post("/api/runs/{rid}/reopen-approval")
+    async def reopen_approval(rid: str):
+        return await app.state.engine.reopen_approval(rid)
+
     @app.post("/api/runs/{rid}/cancel")
     async def cancel(rid: str):
         return await app.state.engine.stop(rid)

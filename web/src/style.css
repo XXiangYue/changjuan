@@ -2192,6 +2192,7 @@ kbd {
 }
 .review-content {
   flex: 1;
+  min-height: 0;
   overflow: auto;
   padding: 22px 19px;
 }
@@ -2486,6 +2487,39 @@ kbd {
   margin-top: 12px;
   display: grid;
   gap: 15px;
+}
+.review-sidebar > .approval-box {
+  flex-shrink: 0;
+  padding: 14px 19px;
+  margin: 0;
+  background: #f8f9f2;
+  gap: 10px;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+.review-close {
+  margin-left: auto;
+}
+.chapter-approval-callout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 18px;
+  border-top: 1px solid #dce4d4;
+  background: #f1f5e9;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+.chapter-approval-callout p,
+.workflow-hint {
+  color: #647657;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.workflow-hint {
+  margin: -12px 0 20px;
 }
 .approval-box textarea {
   font-size: 10px;

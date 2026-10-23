@@ -554,6 +554,60 @@ def test_chapter_memory_transaction_rolls_back(client):
     assert after["memory"] == p["memory"] and not after["facts"]
 
 
+def test_cancelled_author_checkpoint_can_be_reopened_without_regenerating(client):
+    p = create(client)
+    rid, ch = draft(client, p, p["chapters"][0]["id"])
+    before = client.get("/api/runs/" + rid + "/events?once=true").json()
+    client.post("/api/runs/" + rid + "/cancel")
+    response = client.post("/api/runs/" + rid + "/reopen-approval")
+    assert response.status_code == 200, response.text
+    assert response.json()["status"] == "awaiting_approval"
+    current = client.get("/api/chapters/" + ch["id"]).json()
+    assert current == ch
+    after = client.get("/api/runs/" + rid + "/events?once=true").json()
+    assert [e for e in after if e["type"].startswith("model.")] == [
+        e for e in before if e["type"].startswith("model.")
+    ]
+    p = approve(client, p, rid, ch)
+    assert p["chapters"][0]["canonical_revision"] == 1
+
+
+def test_changed_draft_cannot_reopen_old_author_checkpoint(client):
+    p = create(client)
+    rid, ch = draft(client, p, p["chapters"][0]["id"])
+    client.post("/api/runs/" + rid + "/cancel")
+    response = client.put(
+        "/api/chapters/" + ch["id"] + "/draft",
+        json={
+            "content": ch["content"] + "\n\n作者修改。",
+            "title": ch["title"],
+            "base_revision": ch["draft_revision"],
+        },
+    )
+    assert response.status_code == 200
+    assert client.post("/api/runs/" + rid + "/reopen-approval").status_code == 409
+    assert client.get("/api/chapters/" + ch["id"]).json()["canonical_revision"] == 0
+
+
+def test_reopening_cannot_displace_another_active_run(client):
+    p = create(client)
+    rid, ch = draft(client, p, p["chapters"][0]["id"])
+    client.post("/api/runs/" + rid + "/cancel")
+    another = client.post(
+        "/api/runs",
+        json={
+            "project_id": p["id"],
+            "chapter_id": ch["id"],
+            "kind": "review",
+        },
+    ).json()
+    wait(client, another["id"])
+    assert client.post("/api/runs/" + rid + "/reopen-approval").status_code == 409
+    assert (
+        client.get("/api/runs/" + another["id"]).json()["status"] == "awaiting_approval"
+    )
+
+
 def test_cross_volume_uses_same_review_and_commit_flow(client):
     p = setup(client, create(client))
     for cid in [x["id"] for x in p["chapters"]]:

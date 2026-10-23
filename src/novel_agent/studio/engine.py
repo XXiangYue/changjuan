@@ -234,6 +234,46 @@ class Engine:
         self._schedule(rid, Command(resume=approval) if approval is not None else None)
         return self.status(rid)
 
+    async def reopen_approval(self, rid):
+        """Restore an unchanged, cancelled author checkpoint without model calls."""
+        r = self.status(rid)
+        snapshot = await self.graph.aget_state({"configurable": {"thread_id": rid}})
+        if "approval" not in snapshot.next:
+            raise Conflict("原审阅检查点不可用，请重新检查正文")
+        try:
+            with self.db.transaction() as c:
+                r = dict(c.execute("SELECT * FROM runs WHERE id=?", (rid,)).fetchone())
+                if (
+                    r["status"] != "cancelled"
+                    or r["node"] != "approval"
+                    or not r["chapter_id"]
+                ):
+                    raise Conflict("只有确认前取消的章节审阅可以恢复")
+                ch = dict(
+                    c.execute(
+                        "SELECT * FROM chapters WHERE id=?", (r["chapter_id"],)
+                    ).fetchone()
+                )
+                revision = c.execute(
+                    "SELECT revision FROM projects WHERE id=?", (r["project_id"],)
+                ).fetchone()[0]
+                if (
+                    ch["reviewed_hash"] != digest(ch["content"])
+                    or ch["reviewed_project_revision"] != revision
+                    or ch["status"] != "review"
+                ):
+                    raise Conflict("正文或故事设定已变化，请重新检查与生成记忆提案")
+                c.execute(
+                    "UPDATE runs SET status='awaiting_approval',cancel_requested=0,error='',updated=? WHERE id=?",
+                    (now(), rid),
+                )
+        except sqlite3.IntegrityError:
+            raise Conflict("该作品有其他未完成任务，请先处理") from None
+        self.db.event(
+            rid, "awaiting_approval", {"message": "已恢复原审阅，等待作者确认"}
+        )
+        return self.status(rid)
+
     async def stop(self, rid, pause=False):
         r = self.status(rid)
         if r["status"] in ("completed", "cancelled"):

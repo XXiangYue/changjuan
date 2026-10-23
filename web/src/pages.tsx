@@ -49,6 +49,14 @@ export function Outline({
     run.status === "awaiting_approval"
       ? run.result
       : null;
+  const locked =
+    !!run &&
+    ["queued", "running", "awaiting_approval", "interrupted"].includes(
+      run.status,
+    );
+  const hasStory =
+    !!p.outline || p.chapters.some((c) => c.canonical_revision > 0);
+  const nextVolume = Math.max(0, ...p.volumes.map((v) => v.number)) + 1;
   useEffect(() => {
     if (!edit) setText(p.outline);
   }, [p.outline]);
@@ -73,17 +81,31 @@ export function Outline({
           <h1>先看见故事的远方。</h1>
           <p>让每一次相遇、选择与告别，都有来处，也有回响。</p>
         </div>
-        <Button
-          onClick={() =>
-            start(p.revision ? "volume" : "blueprint", instruction)
-          }
-          variant="primary"
-          disabled={busy || !!bp}
-        >
-          <Sparkles size={16} />
-          {p.revision ? "筹备下一卷" : "生成故事蓝图"}
-        </Button>
+        <div className="button-row">
+          {!hasStory && (
+            <Button
+              onClick={() => start("blueprint", instruction)}
+              disabled={locked}
+            >
+              <Sparkles size={16} />
+              生成故事蓝图
+            </Button>
+          )}
+          <Button
+            onClick={() => start("volume", instruction)}
+            variant="primary"
+            disabled={locked}
+          >
+            <Sparkles size={16} />
+            创建下一卷
+          </Button>
+        </div>
       </div>
+      {locked && !bp && (
+        <p className="workflow-hint" role="status">
+          请先完成或确认当前任务，再创建下一卷。
+        </p>
+      )}
       <section className="direction-card">
         <div>
           <span className="eyebrow">YOUR DIRECTION</span>
@@ -118,7 +140,10 @@ export function Outline({
         <section className="blueprint-review">
           <div className="section-title">
             <h2>
-              <Eye size={18} /> 故事蓝图，待你确认
+              <Eye size={18} />{" "}
+              {run?.kind === "volume"
+                ? `第 ${nextVolume} 卷规划，待你确认`
+                : "故事蓝图，待你确认"}
             </h2>
             <span className="pill">规划草案</span>
           </div>
@@ -145,7 +170,9 @@ export function Outline({
             <span>确认后才会成为正式的故事规划。</span>
             <Button variant="primary" onClick={() => approve()}>
               <CheckCheck size={16} />
-              确认故事蓝图
+              {run?.kind === "volume"
+                ? `确认创建第 ${nextVolume} 卷`
+                : "确认故事蓝图"}
             </Button>
           </div>
         </section>

@@ -36,6 +36,15 @@ pnpm --dir web build
 
 测试临时目录位于项目 `.cache/`。日常测试不需要真实模型密钥；`eval` 命令中的生成实验会调用模型，执行前请阅读 [评估方法](docs/评估方法.md)。
 
+界面流程回归使用 Playwright，在隔离的开发端口运行并拦截全部 API，不读取本地作品或调用模型：
+
+```bash
+pnpm --dir web exec playwright install chromium
+pnpm --dir web test:e2e
+```
+
+本机已有 Chrome 时，也可以运行 `PLAYWRIGHT_CHANNEL=chrome pnpm --dir web test:e2e`。用例覆盖不同窗口宽度下的章节确认、审阅恢复和新卷入口；测试输出位于 `.cache/browser-tests/`。
+
 文档或图片修改需检查相对链接、图片路径、GitHub 渲染及窄屏可读性。不要把静态徽章写成未经验证的构建或覆盖率成绩。
 
 ## 修改落在哪里

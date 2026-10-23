@@ -22,6 +22,7 @@ import {
   ShieldCheck,
   Sparkles,
   Undo2,
+  X,
 } from "lucide-react";
 import {
   api,
@@ -49,6 +50,7 @@ export function EditorPane({
   toggleFocus,
   onSelectChapter,
   onRun,
+  onReview,
   onSaved,
   notify,
   registerFlush,
@@ -64,6 +66,7 @@ export function EditorPane({
   toggleFocus: () => void;
   onSelectChapter: (id: string) => void;
   onRun: (k: string, i?: string, s?: string, autoRevise?: boolean) => void;
+  onReview: () => void;
   onSaved: (c: Chapter) => void;
   notify: (s: string) => void;
   registerFlush: (fn: () => Promise<void>) => void;
@@ -83,6 +86,8 @@ export function EditorPane({
     timer = useRef<ReturnType<typeof setTimeout> | null>(null),
     titleRef = useRef(title),
     dataRef = useRef(chapter.content);
+  const pending =
+    run?.chapter_id === chapter.id && run.status === "awaiting_approval";
   const editor = useEditor({
     extensions: [StarterKit, Markdown],
     content: chapter.content,
@@ -375,6 +380,18 @@ export function EditorPane({
           )}
         </div>
       </div>
+      {pending && (
+        <div className="chapter-approval-callout" role="status">
+          <div>
+            <strong>本章已生成，等待你确认</strong>
+            <p>审阅正文与记忆后，即可定稿并继续下一章。</p>
+          </div>
+          <Button variant="primary small" onClick={onReview}>
+            <CheckCheck size={15} />
+            审阅并确认本章
+          </Button>
+        </div>
+      )}
       <div className="composer">
         <div className="composer-input">
           <Sparkles size={17} />
@@ -534,6 +551,9 @@ export function ReviewPanel({
   busy,
   approve,
   onSource,
+  tab,
+  setTab,
+  onClose,
 }: {
   project: Project;
   chapter: Chapter;
@@ -548,9 +568,11 @@ export function ReviewPanel({
     stateChanges?: number[],
   ) => void;
   onSource: (id: string) => void;
+  tab: string;
+  setTab: (tab: string) => void;
+  onClose: () => void;
 }) {
-  const [tab, setTab] = useState("plan"),
-    [selected, setSelected] = useState<string[]>([]),
+  const [selected, setSelected] = useState<string[]>([]),
     [overrides, setOverrides] = useState<Record<string, string>>({}),
     [editing, setEditing] = useState(""),
     [note, setNote] = useState(""),
@@ -574,7 +596,6 @@ export function ReviewPanel({
     setFacts(
       ch.proposal.accepted_facts || (ch.proposal.facts || []).map((_, i) => i),
     );
-    if (pending) setTab("review");
   }, [JSON.stringify(ch.proposal), pending]);
   return (
     <aside className="review-sidebar">
@@ -593,6 +614,14 @@ export function ReviewPanel({
             {k === "review" && pending && <i className="nav-dot" />}
           </button>
         ))}
+        <button
+          className="review-close"
+          title="收起审阅侧栏"
+          aria-label="收起审阅侧栏"
+          onClick={onClose}
+        >
+          <X size={16} />
+        </button>
       </div>
       <div className="review-content">
         {tab === "plan" && (
@@ -859,58 +888,67 @@ export function ReviewPanel({
                 ))}
               </div>
             )}
-            {pending && (
-              <div className="approval-box">
-                <label>
-                  {needsReason
-                    ? "继续定稿的原因（必填）"
-                    : "给这次定稿留句话（可选）"}
-                  <textarea
-                    aria-label="定稿备注"
-                    rows={2}
-                    value={note}
-                    onChange={(e) => setNote(e.target.value)}
-                    placeholder={
-                      needsReason
-                        ? "说明已知问题及你的创作决定"
-                        : "例如：保留这一版更克制的结尾。"
-                    }
-                  />
-                </label>
-                <Button
-                  variant="primary"
-                  disabled={
-                    busy ||
-                    (needsReason && !note.trim()) ||
-                    (stateChanges.length > 0 && !stateValid)
-                  }
-                  onClick={() =>
-                    approve(
-                      selected,
-                      Object.fromEntries(
-                        Object.entries(overrides).filter(([k]) =>
-                          selected.includes(k),
-                        ),
-                      ),
-                      note,
-                      facts,
-                      summary,
-                      stateChanges,
-                    )
-                  }
-                >
-                  <CheckCheck size={16} />
-                  确认本章与 {selected.length} 项记忆
-                  {stateChanges.length > 0
-                    ? `、${stateChanges.length}项状态`
-                    : ""}
-                </Button>
-                <small>保存版本、保留来源，并为下一章做好准备。</small>
-              </div>
-            )}
           </>
         )}
       </div>
+      {pending && (
+        <div className="approval-box" aria-label="本章定稿操作">
+          {tab !== "memory" ? (
+            <Button variant="primary" onClick={() => setTab("memory")}>
+              <ArrowRight size={15} />
+              审阅记忆并定稿
+            </Button>
+          ) : (
+            <>
+              <label>
+                {needsReason
+                  ? "继续定稿的原因（必填）"
+                  : "给这次定稿留句话（可选）"}
+                <textarea
+                  aria-label="定稿备注"
+                  rows={2}
+                  value={note}
+                  onChange={(e) => setNote(e.target.value)}
+                  placeholder={
+                    needsReason
+                      ? "说明已知问题及你的创作决定"
+                      : "例如：保留这一版更克制的结尾。"
+                  }
+                />
+              </label>
+              <Button
+                variant="primary"
+                disabled={
+                  busy ||
+                  (needsReason && !note.trim()) ||
+                  (stateChanges.length > 0 && !stateValid)
+                }
+                onClick={() =>
+                  approve(
+                    selected,
+                    Object.fromEntries(
+                      Object.entries(overrides).filter(([k]) =>
+                        selected.includes(k),
+                      ),
+                    ),
+                    note,
+                    facts,
+                    summary,
+                    stateChanges,
+                  )
+                }
+              >
+                <CheckCheck size={16} />
+                确认本章与 {selected.length} 项记忆
+                {stateChanges.length > 0
+                  ? `、${stateChanges.length}项状态`
+                  : ""}
+              </Button>
+              <small>保存版本、保留来源，并为下一章做好准备。</small>
+            </>
+          )}
+        </div>
+      )}
       <footer>
         <Leaf size={13} />
         细节被记住，故事才能走得远。

@@ -78,6 +78,7 @@ export default function App() {
     [searchResults, setSearchResults] = useState<any[] | null>(null),
     [events, setEvents] = useState<any[]>([]),
     [showEvents, setShowEvents] = useState(false),
+    [reviewTab, setReviewTab] = useState("plan"),
     [historyRun, setHistoryRun] = useState<Run | undefined>(undefined);
   const flushRef = useRef<() => Promise<void>>(async () => {}),
     pidRef = useRef(""),
@@ -86,8 +87,24 @@ export default function App() {
     project?.chapters.find((c) => c.id === cid) || project?.chapters[0];
   const run =
     project?.runs.find((r) => activeStates.includes(r.status)) ||
-    (project?.runs[0]?.status === "failed" ? project.runs[0] : undefined);
+    (project?.runs[0]?.status === "failed" ||
+    (project?.runs[0]?.status === "cancelled" &&
+      project.runs[0].node === "approval" &&
+      project.chapters.some(
+        (c) => c.id === project.runs[0].chapter_id && c.status === "review",
+      ))
+      ? project.runs[0]
+      : undefined);
   const busy = !!run && ["running", "queued"].includes(run.status);
+  const recoverableApproval =
+    run?.status === "cancelled" && run.node === "approval";
+  useEffect(() => {
+    if (run?.status === "awaiting_approval" && run.chapter_id) {
+      setSide(true);
+      setFocus(false);
+      setReviewTab("review");
+    }
+  }, [run?.id, run?.status]);
   function notify(message: string) {
     setToast(message);
     if (toastTimer.current) clearTimeout(toastTimer.current);
@@ -241,10 +258,25 @@ export default function App() {
     }
   }
   async function viewRun(r: Run) {
+    await flushRef.current();
     if (r.chapter_id) setCid(r.chapter_id);
+    setSide(true);
+    setFocus(false);
+    setReviewTab("memory");
     await navigate(
       ["blueprint", "volume"].includes(r.kind) ? "outline" : "write",
     );
+  }
+  async function reopenApproval() {
+    if (!run) return;
+    try {
+      const reopened = await post<Run>("/runs/" + run.id + "/reopen-approval");
+      await refresh();
+      await viewRun(reopened);
+      notify("已恢复审阅，原正文和记忆提案保持不变");
+    } catch (e) {
+      notify((e as Error).message);
+    }
   }
   async function control(action: string) {
     if (!run) return;
@@ -502,13 +534,17 @@ export default function App() {
               <strong>
                 {busy
                   ? stage || labels[run.node] || "正在创作"
-                  : labels[run.status]}
+                  : recoverableApproval
+                    ? "本章已生成，可继续审阅"
+                    : labels[run.status]}
               </strong>
               <small>
                 {run.error ||
-                  (run.status === "awaiting_approval"
-                    ? "正文与记忆差异已准备好，等待你的决定。"
-                    : "每一步进度都会保存。")}
+                  (recoverableApproval
+                    ? "确认前取消的审阅可以恢复，无需重新生成正文。"
+                    : run.status === "awaiting_approval"
+                      ? "正文与记忆差异已准备好，等待你的决定。"
+                      : "每一步进度都会保存。")}
               </small>
             </span>
             <div className="run-actions">
@@ -534,11 +570,16 @@ export default function App() {
               ) : run.status === "awaiting_approval" ? (
                 <>
                   <button onClick={() => viewRun(run)}>
-                    查看审阅
+                    审阅并确认
                     <ArrowRight size={13} />
                   </button>
                   <button onClick={() => control("cancel")}>放弃本次</button>
                 </>
+              ) : recoverableApproval ? (
+                <button onClick={reopenApproval}>
+                  继续审阅本章
+                  <ArrowRight size={13} />
+                </button>
               ) : (
                 <>
                   <button onClick={() => control("resume")}>
@@ -1027,6 +1068,14 @@ export default function App() {
                       </button>
                       <button
                         className="chapter-export"
+                        disabled={!!run && activeStates.includes(run.status)}
+                        onClick={() => start("volume")}
+                      >
+                        <BookOpen size={15} />
+                        创建下一卷
+                      </button>
+                      <button
+                        className="chapter-export"
                         onClick={() => setModal("export")}
                       >
                         <Download size={15} />
@@ -1047,6 +1096,7 @@ export default function App() {
                     toggleFocus={() => setFocus(!focus)}
                     onSelectChapter={openChapter}
                     onRun={start}
+                    onReview={() => run && viewRun(run)}
                     notify={notify}
                     onSaved={(saved) =>
                       setProject((p) =>
@@ -1070,6 +1120,9 @@ export default function App() {
                       chapter={ch}
                       run={run}
                       busy={busy}
+                      tab={reviewTab}
+                      setTab={setReviewTab}
+                      onClose={() => setSide(false)}
                       approve={approve}
                       onSource={openChapter}
                     />
