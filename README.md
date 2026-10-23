@@ -1,105 +1,172 @@
-# 长卷 · 让故事生长
+<p align="center">
+  <img src="docs/assets/cover.svg" alt="长卷 Changjuan — 让故事，慢慢生长" width="100%">
+</p>
 
-开源版本采用 [MIT 许可证](LICENSE)。仓库包含源码、测试、评估输入及文档；个人小说、密钥、数据库和 `artifacts/` 下的本地实验产物不随源码发布。下文涉及 `artifacts/` 的报告与样书链接仅适用于生成了对应产物的本地工作区，历史实验描述不代表仓库附带原始证据。
+<h1 align="center">长卷 · Changjuan</h1>
 
-面向长篇作者的本地小说创作工作台。你决定故事的方向，长卷协助规划、续写、检查设定和整理记忆。每章的正文、事实与记忆变更都能审阅，确认后才进入正式故事。
+<p align="center">
+  <strong>有记忆、可审阅的长篇小说创作工作台</strong><br>
+  从一个灵感，到下一章。你决定故事的方向，长卷帮你记住沿途的细节。
+</p>
 
-**2026-10-21补强**：加入作者勾选的事件账本、带时序及版本资格的检索、60KB资料子包预算、三个受限MCP工具与强杀恢复验证。默认检索依据开发集选择关键词；深度重排可选，实测更慢。新三章实写保留超长和兑现不足，单个真实返工坏例得到补齐，未宣称整体文学质量提升。见[简历与证据](docs/项目简历与面试材料.md)、[开发闭环](docs/简历蓝图与开发闭环.md)及[历史改稿机制](docs/历史改稿机制.md)。
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-52664A?style=flat-square" alt="MIT License"></a>
+  <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.12%2B-52664A?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python 3.12+"></a>
+  <a href="web/package.json"><img src="https://img.shields.io/badge/React-19-52664A?style=flat-square&amp;logo=react&amp;logoColor=white" alt="React 19"></a>
+  <a href="#data"><img src="https://img.shields.io/badge/Storage-Local-52664A?style=flat-square" alt="本地存储"></a>
+</p>
 
-**已接通 DeepSeek 官方 API，完成原创样书、对照实验和三位AI子代理片段评审。** 原始结果见 [实测报告](artifacts/evaluation/实测报告.md)。代理的18个选择为完整工作流8、旧策略7、接近3，未显示明确的整体追读优势；[逐位理由与引文](artifacts/evaluation/AI代理片段评审.md)已保留。真人评价为可选功能，未提交的偏好不会被补写。
+<p align="center">
+  <a href="#start">快速开始</a> ·
+  <a href="#features">功能一览</a> ·
+  <a href="docs/README.md">项目文档</a> ·
+  <a href="CONTRIBUTING.md">参与贡献</a> ·
+  <a href="https://github.com/XXiangYue/changjuan/issues">问题反馈</a>
+</p>
 
-## 启动
+---
 
-本机直接双击 **启动长卷.command**，或在项目目录运行：
+长篇写作需要持续照顾人物、设定、伏笔与前后因果。长卷把**故事规划 → 章节创作 → 编辑审阅 → 记忆确认**放进同一个工作台：你可以亲自写作、让 AI 续写或改写选段，再决定哪些文字和设定进入正式故事。
 
-~~~bash
-./scripts/dev.sh
-~~~
+<p align="center">
+  <img src="docs/assets/writing-workbench.png" alt="长卷写作工作台：左侧章节目录，中间正文编辑器，右侧章节目标与场景规划" width="100%">
+  <br><sub>真实工作台截图 · 展示作品为开发验收样书，新安装从空白书架开始。</sub>
+</p>
 
-打开 http://127.0.0.1:8765 。启动脚本使用项目内的 Python 环境与已构建前端。首次安装需要 Python 3.12、uv、Node.js 22+ 和 pnpm 10+：
+<a id="features"></a>
 
-~~~bash
+## 为长篇创作准备
+
+| 创作时的需要 | 长卷如何协助 |
+| :--- | :--- |
+| **先想好，再下笔** | 从故事方向生成全书蓝图、分卷安排与章节场景；目标和约束随时可改。 |
+| **记得前文，接得上下一章** | 核心记忆、上一章全文、近期摘要与历史检索共同提供上下文；按章节时间和有效版本筛选依据。 |
+| **写作与编辑在同一页** | 流式续写、选段改写、自动保存、专注模式与版本比较，让修改留在创作过程中。 |
+| **让每次定稿有据可查** | 一致性与叙事两类编辑提供意见；正文、事实和记忆变化由作者审阅后确认。 |
+| **改前文，也照顾后文** | 历史章重新定稿后，后续章节标记待复核；旧版本和原始来源可回看。 |
+| **随时停下，再接着写** | 持久化检查点支持中断恢复；用量与费用估算可查，作品可导出 Markdown、TXT 或 ZIP。 |
+
+<details>
+<summary><strong>再看两处细节：作品概览与版本比较</strong></summary>
+
+### 故事从这里继续
+
+作品、章节进度与故事记忆集中在同一个书架。
+
+![作品概览：书封、故事方向和章节进度](docs/assets/story-overview.png)
+
+### 改稿也保留来路
+
+比较历史定稿与当前草稿。恢复旧版本会先成为草稿，经过审阅后再定稿。
+
+![历史版本与当前草稿并排比较](docs/assets/version-comparison.png)
+
+</details>
+
+<a id="start"></a>
+
+## 快速开始
+
+准备 **Python 3.12、[uv](https://docs.astral.sh/uv/getting-started/installation/)、Node.js 22+ 和 [pnpm 10+](https://pnpm.io/installation)**。以下命令适用于 macOS / Linux 的 shell；当前主要在 macOS 上验证，Windows 原生环境尚未验证。
+
+```bash
+git clone https://github.com/XXiangYue/changjuan.git
+cd changjuan
+
+# 安装后端与前端依赖
 UV_CACHE_DIR="$PWD/.cache/uv" uv sync --frozen --extra dev
 pnpm --dir web install --frozen-lockfile --store-dir "$PWD/.cache/pnpm"
+
+# 构建界面并打开工作台
 pnpm --dir web build
 .venv/bin/novel-agent serve --open
-~~~
+```
 
-在“模型与设置”中配置官方 DeepSeek 密钥并测试连接；也支持项目 .env 中的 DEEPSEEK_API_KEY。密钥只由后端使用，不进入前端响应、导出或实验报告。默认模型固定为 deepseek-flash，实际响应模型标识和调用日期保存在用量记录。
+打开 [http://127.0.0.1:8765](http://127.0.0.1:8765)，进入左下角 **「模型与设置」**，填写 DeepSeek API Key 并测试连接。也可以复制 `.env.example` 为 `.env`，填写 `DEEPSEEK_API_KEY`。
 
-## 从灵感到定稿
+> [!NOTE]
+> 当前代码使用 DeepSeek 官方接口和 `deepseek-flash` 模型，需要账号具备相应访问权限。生成和模型审阅会产生 API 费用；应用在本地运行，调用时会把所需的正文与上下文发送给模型服务。
 
-1. 新建作品，填写方向、文风、章数与每章字数。
-2. 在“故事规划”中生成蓝图，比较冲突方案，确认全书方向、章节安排与十份核心记忆。
-3. 进入“写作工作台”，亲自写作或让长卷创作。右侧可查看场景目标、必须遵守的设定与历史依据。
-4. 查看两位编辑的意见。可关闭“自动修订”后自己改稿；开启时最多三轮，未解决的问题保留供作者决定。
-5. 逐项选择事实和记忆变化；可编辑记忆内容或拒绝提案。确认后保存正文版本与故事状态。
-6. 继续下一章；可以选段改写、恢复历史版本、搜索来源，最后导出 Markdown、TXT 或原目录结构 ZIP。
+安装完成后，可直接运行 `.venv/bin/novel-agent serve --open`。macOS 也可以双击 **启动长卷.command**；该快捷入口依赖 zsh、uv 和 pnpm。
 
-修改正文会使旧审核和提案失效。重写历史章节会标记后续章节待复核；请从最早的待复核章开始。任务暂停、断线或重启后，从运行提示条恢复即可。
+### 写下第一章
 
-## 可以使用的能力
+1. **新建作品**：填写故事方向、文风、章数与目标字数。
+2. **确认蓝图**：在「故事规划」中生成并调整全书方向、场景与核心记忆。
+3. **创作正文**：在「写作工作台」亲自写作、AI 续写或改写选段。
+4. **审阅定稿**：查看编辑意见，选择接受的事实和记忆变化，再确认本章。
 
-| 作者的需要 | 对应操作 |
-|---|---|
-| 先控制剧情，再写正文 | 故事规划、冲突候选、章节场景与约束编辑 |
-| 查清角色此时知道什么 | 资料库的时序事实、原文引用、章节来源 |
-| 长篇写到后面仍能衔接 | 核心记忆、上一章全文、近十章摘要、关键词与语义检索 |
-| 改一段，不丢整章 | 选段改写、自动保存、版本比较与恢复草稿 |
-| 不让猜测污染设定 | 草稿与正式稿分离、正文和记忆一起审阅 |
-| 刷新后继续工作 | 后台任务、LangGraph 检查点、持久 SSE 事件 |
-| 看清效果和费用 | 运行记录、预算预留、真实实验、匿名片段对比 |
+接下来可以继续下一章、创建新卷或导出作品。完整操作见 [作者使用手册](docs/使用手册.md)。
 
-语义检索使用本地 BGE 中文嵌入与 Qdrant，无需启动数据库服务。首次启用会下载模型到本项目缓存。不可用时界面显示降级，关键词和时序状态仍可使用。
+## 故事如何被记住
 
-“故事资料库→状态账本”可查看已确认的持有、知情和伏笔来源；“记忆”审阅页中的状态变化默认不勾选。资源以整数最小单位计量，未知数量不当成零。程序核对来源、版本和前置条件，作者仍需判断含义是否正确。在“调整规划”中可填写篇幅上下限，不填沿用目标±20%；生成会按场景分配篇幅并实测正文字符，仍超限时保留草稿供作者处理。
+```mermaid
+flowchart LR
+    A[故事方向与章节规划] --> B[按时间与版本整理上下文]
+    B --> C[创作草稿]
+    C --> D[一致性与叙事审阅]
+    D --> E[作者确认正文与记忆]
+    D -. 最多三轮自动修订 .-> C
+    E --> F[(正式故事与版本历史)]
+    F --> B
+```
 
-## 数据与运行
+规划、写作、编辑与记忆整理使用分开的上下文。正式状态在作者确认后统一提交；历史章改写会使后续旧状态失效，并提示逐章复核。
 
-- SQLite 是权威数据源：data/studio.sqlite；检查点：data/checkpoints.sqlite。
-- Markdown 阅读镜像：data/projects/作品ID/workspace 与 小说本体/第X卷/第X章.md。
-- 私有设置：.local/settings.json；模型缓存：.cache；实验：artifacts/evaluation。
-- 一份作品同一时间只有一个创作或待确认任务；不同作品可同时工作。
-- 服务仅监听本机回环地址。本版为单人本地产品，不提供账号、云同步或付费服务。
-- 导出格式卡片将文件保存在 data/projects/作品ID/exports，并显示路径；也可主动点击浏览器下载。
-- ZIP 导出包含当前已定稿正文与记忆；完整历史、运行记录和检查点请在停止服务后备份 data 目录。ZIP 不含密钥。
-- 费用是按官方高峰单价和实际返回 token 数的保守估算，并非官方账单；未知计费用量保守保留。预算最高 300 元，不足下一次调用时保存并暂停。
+| 界面 | 服务与工作流 | 记忆与检索 |
+| :--- | :--- | :--- |
+| React · TypeScript · Tiptap | FastAPI · LangGraph · DeepAgents | SQLite · FTS5 · Qdrant · BGE |
 
-## 验证与实验
+默认使用关键词检索；可在设置中启用本地语义检索。首次启用需下载嵌入模型，索引保存在本地。技术细节见 [架构与接口](docs/架构与接口.md)；外部客户端接入见 [MCP 与技能边界](docs/MCP与技能边界.md)。
 
-~~~bash
-./scripts/check.sh
-.venv/bin/novel-agent eval --mode report
-.venv/bin/novel-agent eval --mode ablations
-.venv/bin/novel-agent eval --mode integration --parallel 8
-.venv/bin/novel-agent eval --mode audit
-.venv/bin/novel-agent eval --mode baseline
-.venv/bin/novel-agent eval --mode sample
-.venv/bin/novel-agent eval --mode retrieval --dataset retrieval-novel-v1.1 --split heldout --rerank
-.venv/bin/novel-agent mcp --project-id 作品ID --before-position 100004 --port 8765
-~~~
+<a id="data"></a>
 
-retrieval不调用收费聊天API；需已缓存的本地模型，`--rerank`不会自动下载，CPU测试可能约10分钟。验收集已公开，后续重跑只作回归，不作为新的未见样本。MCP命令通过stdio连接运行中的本地服务，启动时固定作品与时间上界，只有查询、状态读取及待确认提案工具，没有正式定稿权限；详见[MCP与技能边界](docs/MCP与技能边界.md)。
+## 你的作品，保存在本地
 
-sample、baseline、ablations、integration、audit 会真实调用模型并产生费用，需要服务已启动。默认整卷命令使用《余烬照山河》已确认蓝图，可从进度继续；测试操作者的自动确认会明确写入审计，不能代替读者评价。固定探针只重试尚未成功的试次，原始失败不删除。integration 另外运行96次真实章节执行图的历史缺口压力验收：历史输入是冻结档案，不是真实生成的前十一章；共享稳定规则，按实际开关启用/关闭历史检索与结构化状态。已完成正文的评测失败优先复用原稿，不为补分重新生成。本地工作台HTTP直连，不经过系统代理；首轮传输故障与恢复规则变更另存transport-recovery.json。客户端最多8个在途试验，服务同时执行2个创作任务，编辑节点可并行。
+| 位置 | 内容 |
+| :--- | :--- |
+| `data/` | 作品数据库、检查点、向量索引、正文与记忆镜像、导出文件 |
+| `.local/settings.json` / `.env` | 本机模型配置与密钥 |
+| `.cache/` | 模型与工具缓存 |
+| `artifacts/` | 本地生成的实验结果与测试记录 |
 
-冻结输入见 [evaluations/frozen-cases.json](evaluations/frozen-cases.json)，历史源码快照见 [artifacts/baseline/legacy-source.zip](artifacts/baseline/legacy-source.zip)。原终端 /start、/new_volume、/chapter 入口通过 novel-agent terminal 共用新服务；旧实现保留用于审计与兼容阅读。
+这些目录和私有配置均被 Git 忽略。分享作品可以使用导出功能；完整备份请先停止服务，再复制 `data/`。ZIP 导出包含当前定稿和记忆，完整版本历史与运行记录保留在数据库中。
 
-## 阅读材料
+<details>
+<summary><strong>使用前了解：当前能力边界</strong></summary>
 
-- [产品与实测导览（含实际界面）](artifacts/产品与实测导览.html)
-- [作者使用手册](docs/使用手册.md)
-- [架构与接口](docs/架构与接口.md)
-- [产品与技术叙事](docs/产品与技术叙事.md)
-- [交付与实验结论：包括未取得优势的指标](docs/交付与实验结论.md)
-- [评估方法与边界](docs/评估方法.md)
-- [演示路线](docs/演示路线.md)
-- [实写中发现的问题与修复](docs/实写中发现的问题与修复.md)
-- [实时生成的实测报告](artifacts/evaluation/实测报告.md)
-- [完整样书](artifacts/evaluation/full-novel.md) · [旧策略对照](artifacts/evaluation/baseline-novel.md)
+- 面向单人本地创作，服务仅监听回环地址，没有账号体系和多人协作功能。
+- 模型可能误解事实、漏掉矛盾或写出不合预期的内容；编辑评分与引文校验仍需作者判断，也不等于全网查重。
+- 修改历史章节后，需要从最早的待复核章节向后处理。
+- 中断发生在模型调用途中时，恢复可能重新请求该步骤并产生费用。
+- 已有测试和评估输入用于检查工程行为与固定场景，不代表所有题材或百万字长篇的质量保证。
 
-报告与导览是带时间戳的快照。追加真实盲评后，运行 `novel-agent eval --mode report`，再运行 `.venv/bin/python scripts/build_delivery.py` 更新材料；这两个操作不调用模型。
+</details>
 
-所有任务结束后，可运行 `.venv/bin/python scripts/verify_delivery.py --backup` 更新SQLite交付备份与完整性记录。它也检查当前配置密钥是否出现在可交付文件或ZIP中，不打印密钥；有活跃任务时拒绝备份。`.venv/bin/python scripts/build_manifest.py` 记录源码、依赖与测试快照。
+## 文档与开发
 
-长卷为作者提供可靠的创作过程，不保证每一稿都成为好小说。角色采用独立上下文，但目前使用同一基础模型；引文存在不等于事实解释一定正确，作者审阅仍是关键。
+| 想了解什么 | 从这里开始 |
+| :--- | :--- |
+| 安装后怎样开始写作 | [作者使用手册](docs/使用手册.md) |
+| 组件、数据和接口怎样协作 | [架构与接口](docs/架构与接口.md) |
+| 为什么改前文会影响后文 | [历史改稿机制](docs/历史改稿机制.md) |
+| 如何接入外部客户端 | [MCP 与技能边界](docs/MCP与技能边界.md) |
+| 怎样运行测试和评估 | [评估方法](docs/评估方法.md) · [贡献指南](CONTRIBUTING.md) |
+
+```text
+changjuan/
+├── src/novel_agent/   # Python 服务、工作流、记忆与检索
+├── web/              # React 写作工作台
+├── tests/            # 自动化测试
+├── evaluations/      # 评估输入与协议
+├── scripts/          # 开发、检查和评估工具
+└── docs/             # 使用与技术文档、界面截图
+```
+
+有复现步骤的问题、文档修正和代码改进都欢迎提交。请先阅读 [贡献指南](CONTRIBUTING.md)，或通过 [GitHub Issues](https://github.com/XXiangYue/changjuan/issues) 反馈。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。
+
+<p align="center"><sub>一字一句，自成山河。</sub></p>

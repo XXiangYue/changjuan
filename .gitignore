@@ -8,7 +8,6 @@ __pycache__/
 *.pyc
 web/node_modules/
 web/dist/
-artifacts/**/raw/
 .DS_Store
 
 # Local configuration, writing data and generated evidence
@@ -27,3 +26,8 @@ artifacts/
 *.egg-info/
 /dist/
 /build/
+
+# Local agent instructions are not part of the distributed application
+/agents.md
+/AGENTS.md
+/CLAUDE.md

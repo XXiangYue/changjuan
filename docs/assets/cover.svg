@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-labelledby="title desc">
+  <title id="title">长卷 Changjuan · 让故事，慢慢生长。</title>
+  <desc id="desc">纸张色底上的灰绿色书页与故事轨迹，连接灵感、章节和记忆。</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f8f6ef"/><stop offset="1" stop-color="#e9eddf"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fffef9"/><stop offset="1" stop-color="#f0f1e6"/>
+    </linearGradient>
+    <clipPath id="bounds"><rect width="1280" height="400" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#bounds)">
+    <rect width="1280" height="400" fill="url(#paper)"/>
+    <path d="M678 400C814 334 778 133 957 40S1168-33 1305-20" fill="none" stroke="#d9dfcd"/>
+    <path d="M716 420C858 331 805 168 982 79S1193 2 1312 19" fill="none" stroke="#d9dfcd"/>
+    <path d="M753 440C896 351 844 201 1019 118S1230 42 1349 58" fill="none" stroke="#d9dfcd"/>
+    <circle cx="1014" cy="193" r="146" fill="#dfe6d4" opacity=".5"/>
+    <g font-family="Georgia, 'Songti SC', 'Noto Serif CJK SC', 'SimSun', serif">
+      <rect x="65" y="51" width="40" height="44" rx="4" fill="#52664a"/>
+      <rect x="69" y="55" width="32" height="36" rx="2" fill="none" stroke="#b3bfa3"/>
+      <text x="85" y="83" fill="#fbfaef" font-size="29" text-anchor="middle">卷</text>
+      <text x="123" y="79" font-family="Arial, Helvetica, sans-serif" font-size="13" letter-spacing="4" fill="#52664a">CHANGJUAN / STORY STUDIO</text>
+      <text x="62" y="203" font-size="88" letter-spacing="9" fill="#334231">长卷</text>
+      <text x="66" y="264" font-size="33" letter-spacing="2" fill="#52664a">让故事，慢慢生长。</text>
+    </g>
+    <path d="M67 306H594" stroke="#cdd5c3"/>
+    <g font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#62715b">
+      <circle cx="71" cy="337" r="3" fill="#7a8d68"/>
+      <text x="84" y="342">本地创作</text>
+      <circle cx="215" cy="337" r="3" fill="#7a8d68"/>
+      <text x="228" y="342">故事记忆</text>
+      <circle cx="359" cy="337" r="3" fill="#7a8d68"/>
+      <text x="372" y="342">作者掌舵</text>
+    </g>
+    <g transform="translate(844 68) rotate(9 135 137)">
+      <rect x="19" y="15" width="250" height="276" rx="9" fill="#b6c2a7" opacity=".35"/>
+      <rect x="9" y="8" width="250" height="276" rx="9" fill="#e9eddc" stroke="#cbd4be"/>
+      <rect width="250" height="276" rx="9" fill="url(#page)" stroke="#bbc7ae"/>
+      <path d="M32 0V276" stroke="#dbe1cf"/>
+      <text x="57" y="43" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="3" fill="#8b977c">THE NEXT CHAPTER</text>
+      <text x="56" y="81" font-family="Georgia, 'Songti SC', 'Noto Serif CJK SC', 'SimSun', serif" font-size="24" fill="#4c6142">故事未完，待续。</text>
+      <g stroke="#c9d2ba" stroke-linecap="round" stroke-width="2">
+        <path d="M57 114H213M57 129H213M57 144H184"/>
+        <path d="M57 171H213M57 186H198M57 201H213M57 216H159"/>
+      </g>
+      <path d="M201 0V36L214 28L227 36V0" fill="#7d916b"/>
+      <text x="57" y="249" font-family="Arial, Helvetica, sans-serif" font-size="9" letter-spacing="2" fill="#89977b">ONE STORY. MANY POSSIBILITIES.</text>
+    </g>
+    <path d="M740 305C779 305 777 355 827 355H1060C1109 355 1103 312 1152 312" fill="none" stroke="#889d73" stroke-width="2"/>
+    <g fill="#f5f5eb" stroke="#7d916b" stroke-width="2">
+      <circle cx="742" cy="305" r="6"/><circle cx="899" cy="355" r="6"/><circle cx="1150" cy="312" r="6"/>
+    </g>
+    <g font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" letter-spacing="2" fill="#637557" text-anchor="middle">
+      <text x="742" y="284">灵感</text><text x="899" y="382">章节</text><text x="1150" y="290">记忆</text>
+    </g>
+  </g>
+</svg>
